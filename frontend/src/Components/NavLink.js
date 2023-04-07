@@ -156,14 +156,14 @@ function NavLink() {
             <Nav.Link className='btnLink' href="/" >Home</Nav.Link>
             <Nav.Link className='btnLink' href="/OurServices" >Our services</Nav.Link>
             <Nav.Link className='btnLink' href="/Blogs" >Blog</Nav.Link>
-            <Nav.Link className='btnLink' href="#pricing" >ContactUs</Nav.Link>
+            <Nav.Link className='btnLink' href="/Admin_Management/Test" >ContactUs</Nav.Link>
             <Nav.Link className='btnLink' href="/AddProducts" >Seller</Nav.Link>
 
           </Nav>
 
           <Form className="d-flex">
 
-            <Button variant="outline-success">Login</Button>
+            <Button href="/Admin_Management/Login" variant="outline-success">Login</Button>
 
           </Form>
 
