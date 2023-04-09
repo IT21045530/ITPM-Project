@@ -26,10 +26,10 @@ function OurServices() {
               <h3 class="card-title"> Smart Farming Products</h3><br></br>
               <h5 class="card-text">Smart Farming products from Smart Harvest – tailored to your farming business.</h5>
               <br></br>
-              <p>Smart farming is a modern approach to agriculture that utilizes technology and data to improve efficiency,
-                productivity, and sustainability. At our company, we have developed a range of smart farming products that
-                can help farmers increase their yields, reduce costs, and minimize environmental impact. Here's an introduction
-                to our products:</p>
+              <p>Smart farming products are innovative agricultural tools and technologies that are designed to optimize crop production,
+                reduce labor costs, and improve environmental sustainability. These products utilize advanced technologies such as GPS, sensors,
+                cameras, robotics, and machine learning algorithms to perform a range of tasks related to planting,
+                irrigation, fertilization, pest management, and harvesting.</p>
               <p class="card-text"></p>
               <Button variant="success" href="/ViewProducts">View Products</Button>{' '}
 

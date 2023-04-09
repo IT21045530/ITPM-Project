@@ -12,6 +12,8 @@ import Seller from "./Pages/Seller";
 import Footer from "./Components/Footer";
 import OurServices from "./Pages/OurServices";
 import ViewProducts from "./Pages/ViewProducts";
+import FlowersPList from "./Pages/FlowersPList";
+import ProductTable from "./Pages/ProductTable";
 
 
 function App() {
@@ -30,6 +32,9 @@ function App() {
         <Route exact path="/AddProductForm" element={<AddProductForm />} />
         <Route exact path="/OurServices" element={<OurServices />} />
         <Route exact path="/ViewProducts" element={<ViewProducts />} />
+        <Route exact path="/FlowersPList" element={<FlowersPList />} />
+        <Route exact path="/ProductTable" element={<ProductTable />} />
+
 
 
       </Routes>

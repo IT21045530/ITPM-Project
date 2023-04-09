@@ -39,14 +39,16 @@ function Plants() {
               <Card style={{ backgroundColor: 'rgb(180, 180, 180)' }}>
                 <img src={flower} style={{ height: '350px' }} />
                 <Card.Body style={{ height: '55px' }}>
-                  <Card.Title>Flower Plants
+                  <Card.Title>Flowers & Herbs
 
                   </Card.Title>
 
                 </Card.Body>
                 <Card.Footer>
-                  <Card.Text>Add flower plants or View List   </Card.Text>
-                  <Button variant="success" href="/AddProducts">Click Here</Button>{' '}</Card.Footer>
+                  <Card.Text>Smart farming technologies are transforming the way we cultivate flowers and herbs, making production more efficient,
+                    sustainable, and profitable. These technologies include precision agriculture, hydroponics, vertical farming, robotics, and blockchain.
+                  </Card.Text>
+                  <Button variant="success" href="/FlowersPList">Click Here</Button>{' '}</Card.Footer>
               </Card>
             </Paper>
           </Grid>
@@ -55,11 +57,12 @@ function Plants() {
               <Card style={{ backgroundColor: 'rgb(180, 180, 180)' }}>
                 <img src={Vegitable} style={{ height: '350px' }} />
                 <Card.Body style={{ height: '55px' }}>
-                  <Card.Title>Vegitable & Fruit Plants</Card.Title>
+                  <Card.Title>Vegitables & Fruits</Card.Title>
                 </Card.Body>
                 <Card.Footer>
-                  <Card.Text>Add Vegitable & fruit plants or View List   </Card.Text>
-                  <Button variant="success" href="/AddProducts">Click Here</Button>{' '}</Card.Footer>
+                  <Card.Text>Smart farming technologies are changing the way we grow vegetables and fruits, making agriculture more efficient and sustainable.
+                    Precision agriculture, vertical farming, genetic engineering, drones, and blockchain are among the technologies </Card.Text>
+                  <Button variant="success" href="/FlowersPList">Click Here</Button>{' '}</Card.Footer>
               </Card>
             </Paper>
           </Grid>
@@ -68,11 +71,12 @@ function Plants() {
               <Card style={{ backgroundColor: 'rgb(180, 180, 180)' }}>
                 <img src={Seeds} style={{ height: '350px' }} />
                 <Card.Body style={{ height: '55px' }}>
-                  <Card.Title>Seeds</Card.Title>
+                  <Card.Title>Grains</Card.Title>
                 </Card.Body>
                 <Card.Footer>
-                  <Card.Text>Add seeds or View List   </Card.Text>
-                  <Button variant="success" href="/AddProducts">Click Here</Button>{' '}</Card.Footer>
+                  <Card.Text>Smart farming is transforming the way we cultivate crops, including grains. The term "grains" typically refers to cereal
+                    crops such as wheat, corn, rice, barley, and oats, which are staple foods for billions of people around the world.</Card.Text>
+                  <Button variant="success" href="/FlowersPList">Click Here</Button>{' '}</Card.Footer>
               </Card>
             </Paper>
           </Grid>
