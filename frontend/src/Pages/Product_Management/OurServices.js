@@ -2,12 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import ProductCatogory from '../Components/ProductCatogory';
+import ProductCatogory from '../../Components/ProductCatogory';
 import Button from 'react-bootstrap/esm/Button';
 import Card from 'react-bootstrap/Card';
-import Sbk from '../Images/sbk3.jpg';
-import Fbk from '../Images/frbk1.jpg';
-import Ibk from '../Images/Inbk1.jpg';
+import Sbk from '../../Images/sbk3.jpg';
+import Fbk from '../../Images/frbk1.jpg';
+import Ibk from '../../Images/Inbk1.jpg';
 import Container from 'react-bootstrap/esm/Container';
 
 function OurServices() {

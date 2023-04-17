@@ -6,10 +6,10 @@ import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from 'react-bootstrap/esm/Container';
 import { Button } from '@material-ui/core';
-import Basil from '../Images/basil.jpg';
-import Lavender from '../Images/lavender.jpg'
-import Rosmery from '../Images/rosemary.jpg'
-import Tulip from '../Images/tulip.jpg';
+import Basil from '../../Images/basil.jpg';
+import Lavender from '../../Images/lavender.jpg'
+import Rosmery from '../../Images/rosemary.jpg'
+import Tulip from '../../Images/tulip.jpg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -69,7 +69,7 @@ export default function ComplexGrid() {
                                         </Grid>
                                         <Grid item>
                                             <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                                                <Button href='/Plants'>Buy Now</Button>
+                                                <Button href='/PaymentForm'>Buy Now</Button>
                                             </Typography>
                                         </Grid>
                                     </Grid>
@@ -105,7 +105,7 @@ export default function ComplexGrid() {
                                         </Grid>
                                         <Grid item>
                                             <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                                                <Button href='/Plants'>Buy Now</Button>
+                                                <Button href='/PaymentForm'>Buy Now</Button>
 
                                             </Typography>
                                         </Grid>
@@ -141,7 +141,7 @@ export default function ComplexGrid() {
                                         </Grid>
                                         <Grid item>
                                             <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                                                <Button href='/Plants'>Buy Now</Button>
+                                                <Button href='/PaymentForm'>Buy Now</Button>
 
                                             </Typography>
                                         </Grid>
@@ -178,7 +178,7 @@ export default function ComplexGrid() {
                                         </Grid>
                                         <Grid item>
                                             <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                                                <Button href='/Plants'>Buy Now</Button>
+                                                <Button href='/PaymentForm'>Buy Now</Button>
 
                                             </Typography>
                                         </Grid>

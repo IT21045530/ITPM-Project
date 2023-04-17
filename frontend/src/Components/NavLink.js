@@ -157,7 +157,7 @@ function NavLink() {
             <Nav.Link className='btnLink' href="/OurServices" >Our services</Nav.Link>
             <Nav.Link className='btnLink' href="/Blogs" >Blog</Nav.Link>
             <Nav.Link className='btnLink' href="/Admin_Management/Test" >ContactUs</Nav.Link>
-            <Nav.Link className='btnLink' href="/AddProducts" >Seller</Nav.Link>
+            <Nav.Link className='btnLink' href="/WelcomeSeller" >Seller</Nav.Link>
 
           </Nav>
 

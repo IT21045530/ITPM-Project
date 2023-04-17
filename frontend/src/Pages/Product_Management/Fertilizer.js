@@ -2,12 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import ProductCatogory from '../Components/ProductCatogory';
+import ProductCatogory from '../../Components/ProductCatogory';
 import Button from 'react-bootstrap/esm/Button';
 import Card from 'react-bootstrap/Card';
-import Spray from '../Images/Spray.jpg';
-import Inorganic from '../Images/Inoorganic.jpg';
-import Organic from '../Images/Organic.jpeg';
+import Spray from '../../Images/Spray.jpg';
+import Inorganic from '../../Images/Inoorganic.jpg';
+import Organic from '../../Images/Organic.jpeg';
 import Container from 'react-bootstrap/esm/Container';
 
 function Plants() {
