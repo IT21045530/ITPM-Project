@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from 'react-bootstrap/esm/Button';
 import Card from 'react-bootstrap/Card';
 import ListImg from '../Images/ProductList.png';
-import Vegitable from '../Images/Vegitable.jpg';
+
 
 function AddProducts() {
 
@@ -25,7 +25,7 @@ function AddProducts() {
         <Grid item xs={12} md={6}>
           <Paper >
             <Card style={{ backgroundColor: 'white' }}>
-              <h2 style={{ textAlign: 'center' }}>View Product List</h2>
+              <h2 style={{ textAlign: 'center' }}>Add Smart Farming Product</h2>
               <img src={ListImg} style={{ display: 'block', margin: ' 0 auto', opacity: '60', height: '400px' }} />
 
               <Card.Footer >
@@ -42,7 +42,7 @@ function AddProducts() {
               <img src={ListImg} style={{ display: 'block', margin: ' 0 auto', opacity: '60', height: '400px' }} />
 
               <Card.Footer >
-                <Button variant="success" href="/AddProductForm">Click Here</Button>{' '}</Card.Footer>
+                <Button variant="success" href="/ProductTable">Click Here</Button>{' '}</Card.Footer>
             </Card>
           </Paper>
         </Grid>

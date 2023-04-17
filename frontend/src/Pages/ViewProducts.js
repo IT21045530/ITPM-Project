@@ -49,10 +49,10 @@ export default function CenteredGrid() {
                 <Grid item xs={12}>
                     <center>
                         <h5>SMART FARMING PRODUCTS</h5>
-                        <p>Smart farming is a modern approach to agriculture that utilizes technology and data to improve efficiency,
-                            productivity, and sustainability. At our company, we have developed a range of smart farming products that
-                            can help farmers increase their yields, reduce costs, and minimize environmental impact. Here's an introduction
-                            to our products:</p>
+                        <p>Smart farming products are innovative agricultural tools and technologies that are designed to optimize crop production,
+                            reduce labor costs, and improve environmental sustainability. These products utilize advanced technologies such as GPS,
+                            sensors, cameras, robotics, and machine learning algorithms to perform a range of tasks related to planting,
+                            irrigation, fertilization, pest management, and harvesting.</p>
                     </center>
                 </Grid>
                 <Grid item xs={12}>
