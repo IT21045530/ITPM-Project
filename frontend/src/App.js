@@ -17,6 +17,7 @@ import ProductTable from "./Pages/ProductTable";
 
 import Test from "./Pages/Admin_Management/test";
 import Login from "./Pages/Admin_Management/Login";
+import Testpage from "./Pages/Blog_Management/TestPage";
 
 function App() {
   return (
@@ -38,8 +39,9 @@ function App() {
         <Route exact path="/ProductTable" element={<ProductTable />} />
 
 
-        <Route exact path="/Admin_Management/test" element={<Test />} />
-        <Route exact path="/Admin_Management/login" element={<Login />} />
+        <Route exact path="/Admin_Management/test" element={<Test/>} />
+        <Route exact path="/Admin_Management/login" element={<Login/>} />
+        <Route exact path="/Blog_Management/Testpage" element={<Testpage/>}/>
 
       </Routes>
       <Footer />
