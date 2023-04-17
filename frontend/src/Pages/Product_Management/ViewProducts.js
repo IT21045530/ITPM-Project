@@ -9,11 +9,11 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import Icon from '@material-ui/core/Icon';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import Fbk from '../Images/frbk1.jpg';
-import YoutubeEmbed from '../Components/YoutubeEmbed';
+import Fbk from '../../Images/frbk1.jpg';
+import YoutubeEmbed from '../../Components/YoutubeEmbed';
 import Container from 'react-bootstrap/esm/Container';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import ProductCatogory from '../Components/ProductCatogory';
+import ProductCatogory from '../../Components/ProductCatogory';
 
 
 
@@ -49,7 +49,12 @@ export default function CenteredGrid() {
                 <Grid item xs={12}>
                     <center>
                         <h5>SMART FARMING PRODUCTS</h5>
-                        <p>Smart farming products are innovative agricultural tools and technologies that are designed to optimize crop production,
+                        <p>Welcome to our products page for smart farming products! We are thrilled to offer a wide range of innovative products that are designed
+                            to help farmers increase their crop yield, reduce costs, and minimize environmental impact. Our products are made with the latest
+                            technology and are carefully tested to ensure their effectiveness and reliability. We are dedicated to providing top-notch customer
+                            service and are committed to helping our customers find the right products to meet their specific needs. Whether you're a small-scale
+                            farmer or a large commercial operation,  we have the smart farming products you need to succeed. Thank you for choosing us as your trusted
+                            source for smart farming technology!Smart farming products are innovative agricultural tools and technologies that are designed to optimize crop production,
                             reduce labor costs, and improve environmental sustainability. These products utilize advanced technologies such as GPS,
                             sensors, cameras, robotics, and machine learning algorithms to perform a range of tasks related to planting,
                             irrigation, fertilization, pest management, and harvesting.</p>

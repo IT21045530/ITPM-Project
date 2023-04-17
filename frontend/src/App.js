@@ -2,21 +2,26 @@ import { Route, Routes } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Blog from "./Pages/Blog";
 import Home from "./Pages/Home";
-import AddProductForm from "./Pages/AddProductForm";
-import AddProducts from "./Pages/AddProducts";
-import Fertilizer from "./Pages/Fertilizer";
-import Machines from "./Pages/Machines";
-import Plants from "./Pages/Plants";
-import Products from "./Pages/Products";
-import Seller from "./Pages/Seller";
+import AddProductForm from "./Pages/Product_Management/AddProductForm";
+import AddProducts from "./Pages/Product_Management/AddProducts";
+import Fertilizer from "./Pages/Product_Management/Fertilizer";
+import Machines from "./Pages/Product_Management/Machines";
+import Plants from "./Pages/Product_Management/Plants";
+import Products from "./Pages/Product_Management/Products";
+import Seller from "./Pages/Product_Management/Seller";
 import Footer from "./Components/Footer";
-import OurServices from "./Pages/OurServices";
-import ViewProducts from "./Pages/ViewProducts";
-import FlowersPList from "./Pages/FlowersPList";
-import ProductTable from "./Pages/ProductTable";
+import OurServices from "./Pages/Product_Management/OurServices";
+import ViewProducts from "./Pages/Product_Management/ViewProducts";
+import FlowersPList from "./Pages/Product_Management/FlowersPList";
+import ProductTable from "./Pages/Product_Management/ProductTable";
+import PaymentForm from "./Pages/Product_Management/Paymentform";
+import PayNow from "./Pages/Product_Management/PayNow";
 
 import Test from "./Pages/Admin_Management/test";
 import Login from "./Pages/Admin_Management/Login";
+
+import ThankYou from "./Pages/Product_Management/ThankYou";
+import WelcomeSeller from "./Pages/Product_Management/WelcomeSeller";
 
 function App() {
   return (
@@ -40,6 +45,13 @@ function App() {
 
         <Route exact path="/Admin_Management/test" element={<Test />} />
         <Route exact path="/Admin_Management/login" element={<Login />} />
+
+        <Route exact path="/PaymentForm" element={<PaymentForm />} />
+        <Route exact path="/PayNow" element={<PayNow />} />
+        <Route exact path="/ThankYou" element={<ThankYou />} />
+        <Route exact path="/WelcomeSeller" element={<WelcomeSeller />} />
+
+
 
       </Routes>
       <Footer />

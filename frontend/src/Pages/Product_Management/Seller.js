@@ -1,11 +1,11 @@
 import React from 'react'
- import ProductCatogory from '../Components/ProductCatogory'
+import ProductCatogory from '../../Components/ProductCatogory'
 
 function Seller() {
   return (
     <>
-    <ProductCatogory/> 
-   
+      <ProductCatogory />
+
     </>
   )
 }

@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Button from 'react-bootstrap/esm/Button';
 import Card from 'react-bootstrap/Card';
-import ListImg from '../Images/ProductList.png';
+import ListImg from '../../Images/ProductList.png';
 
 
 function AddProducts() {

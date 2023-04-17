@@ -2,12 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import ProductCatogory from '../Components/ProductCatogory';
+import ProductCatogory from '../../Components/ProductCatogory';
 import Button from 'react-bootstrap/esm/Button';
 import Card from 'react-bootstrap/Card';
-import Hydro from '../Images/Hydropolic.jpg';
-import Drone from '../Images/Drone.jpg';
-import Robots from '../Images/Robots.jpg';
+import Hydro from '../../Images/Hydropolic.jpg';
+import Drone from '../../Images/Drone.jpg';
+import Robots from '../../Images/Robots.jpg';
 import Container from 'react-bootstrap/esm/Container';
 
 function Plants() {

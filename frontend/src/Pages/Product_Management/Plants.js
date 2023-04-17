@@ -2,12 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import ProductCatogory from '../Components/ProductCatogory';
+import ProductCatogory from '../../Components/ProductCatogory';
 import Button from 'react-bootstrap/esm/Button';
 import Card from 'react-bootstrap/Card';
-import flower from '../Images/flower.jpg';
-import Vegitable from '../Images/Vegitable.jpg';
-import Seeds from '../Images/Seeds.jpg';
+import flower from '../../Images/flower.jpg';
+import Vegitable from '../../Images/Vegitable.jpg';
+import Seeds from '../../Images/Seeds.jpg';
 import Container from 'react-bootstrap/esm/Container';
 
 function Plants() {
