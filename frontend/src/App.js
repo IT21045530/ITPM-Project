@@ -19,6 +19,7 @@ import PayNow from "./Pages/Product_Management/PayNow";
 
 import Test from "./Pages/Admin_Management/test";
 import Login from "./Pages/Admin_Management/Login";
+import RegisterUser from "./Pages/Admin_Management/RegisterUser";
 import Testpage from "./Pages/Blog_Management/TestPage";
 
 import ThankYou from "./Pages/Product_Management/ThankYou";
@@ -44,8 +45,11 @@ function App() {
         <Route exact path="/ProductTable" element={<ProductTable />} />
 
 
-        <Route exact path="/Admin_Management/test" element={<Test/>} />
-        <Route exact path="/Admin_Management/login" element={<Login/>} />
+        <Route exact path="/Test" element={<Test/>} />
+        <Route exact path="/Login" element={<Login/>} />
+        <Route exact path="/Register" element={<RegisterUser/>} />
+
+
         <Route exact path="/Blog_Management/Testpage" element={<Testpage/>}/>
 
         <Route exact path="/PaymentForm" element={<PaymentForm />} />
