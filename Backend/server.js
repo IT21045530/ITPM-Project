@@ -30,7 +30,7 @@ const plantRoute = require("./Routes/PlantRoutes");
 app.use("/api/products", plantRoute);
 
 //register user route
-const RegisterUserRoute = require("./Routes/RegisterUserRoutes");
-app.use("/api/users", RegisterUseRoute);
+// const RegisterUserRoute = require("./Routes/RegisterUserRoutes");
+// app.use("/api/users", RegisterUseRoute);
 
 
