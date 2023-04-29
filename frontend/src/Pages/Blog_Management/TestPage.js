@@ -179,6 +179,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Man1 from '../../Images/man1.jpeg';
+import Logo from '../../Images/logo.png';
+import Logo1 from '../../Images/Organic.jpeg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -195,13 +197,16 @@ export default function FullWidthGrid() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} class="border p-4">
       <Grid container spacing={3}>
         
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6}> 
+      <br></br>
           <Paper className={classes.paper}>
           <img className={classes.img} alt="complex" src={Man1} style={{marginRight:'220px'}}/><br></br>
           <p style={{marginTop:'50px'}}>
+            <h3>This is heading of the Blog</h3>
+            
                   The global smart harvest market was valued at $12,450.9 million in 2020,
                   and is projected to reach $36,977.1 million by 2030, growing at a CAGR
                   of 11.4% from 2021 to 2030. Smart harvesting refers to the use of self
@@ -217,12 +222,19 @@ export default function FullWidthGrid() {
                   harvest industry owing to halt the construction activites globally, and lack of
                   penetration of smart technologies in harvesting robots, and agricultural practices.
                   </p>
+                  <button type="button" class="btn btn-success">Read More</button>
         </Paper>
-          
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>
+       
 
+      
+
+        <Grid item xs={12} sm={6}>
+      <br></br>
+          <Paper className={classes.paper}>
+          <img className={classes.img} alt="complex" src={Man1} style={{marginRight:'220px'}}/><br></br>
+          <p style={{marginTop:'50px'}}>
+          <h3>This is heading of the Blog</h3>
                   The global smart harvest market was valued at $12,450.9 million in 2020,
                   and is projected to reach $36,977.1 million by 2030, growing at a CAGR
                   of 11.4% from 2021 to 2030. Smart harvesting refers to the use of self
@@ -237,11 +249,26 @@ export default function FullWidthGrid() {
                   The COVID-19 outbreak had a negatively impact on the growth of the global smart
                   harvest industry owing to halt the construction activites globally, and lack of
                   penetration of smart technologies in harvesting robots, and agricultural practices.
+                  </p>
+                  <div >
+                  <button type="button" class="btn btn-success" >Read More</button>
+                  </div>
             </Paper>
+            <button type="button" class="btn btn-success" >Read More</button>
+           
+                  
         </Grid>
+
+        
         
       </Grid>
+
+      
     </div>
+
+
+
+    
   );
 }
 
