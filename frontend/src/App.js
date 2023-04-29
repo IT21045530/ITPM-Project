@@ -25,6 +25,12 @@ import Testpage from "./Pages/Blog_Management/TestPage";
 import ThankYou from "./Pages/Product_Management/ThankYou";
 import WelcomeSeller from "./Pages/Product_Management/WelcomeSeller";
 
+import AddMachineForm from "./Pages/Product_Management/AddMachineForm";
+import AddFertilizerForm from "./Pages/Product_Management/AddFertilizerForm";
+import ViewPlant from "./Pages/Product_Management/ViewPlant";
+import ViewMachines from "./Pages/Product_Management/ViewMachines";
+import ViewFertilizer from "./Pages/Product_Management/ViewFertilizer";
+
 function App() {
   return (
     <>
@@ -45,17 +51,24 @@ function App() {
         <Route exact path="/ProductTable" element={<ProductTable />} />
 
 
-        <Route exact path="/Test" element={<Test/>} />
-        <Route exact path="/Login" element={<Login/>} />
-        <Route exact path="/Register" element={<RegisterUser/>} />
+        <Route exact path="/Test" element={<Test />} />
+        <Route exact path="/Login" element={<Login />} />
+        <Route exact path="/Register" element={<RegisterUser />} />
 
 
-        <Route exact path="/Blog_Management/Testpage" element={<Testpage/>}/>
+        <Route exact path="/Blog_Management/Testpage" element={<Testpage />} />
 
         <Route exact path="/PaymentForm" element={<PaymentForm />} />
         <Route exact path="/PayNow" element={<PayNow />} />
         <Route exact path="/ThankYou" element={<ThankYou />} />
         <Route exact path="/WelcomeSeller" element={<WelcomeSeller />} />
+        <Route exact path="/AddMachineForm" element={<AddMachineForm />} />
+        <Route exact path="/AddFertilizerForm" element={<AddFertilizerForm />} />
+        <Route exact path="/ViewPlant" element={<ViewPlant />} />
+        <Route exact path="/ViewMachines" element={<ViewMachines />} />
+        <Route exact path="/ViewFertilizer" element={<ViewFertilizer />} />
+
+
 
 
 
