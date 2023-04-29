@@ -1,141 +1,116 @@
-// import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
-// import Table from '@material-ui/core/Table';
-// import TableBody from '@material-ui/core/TableBody';
-// import TableCell from '@material-ui/core/TableCell';
-// import TableContainer from '@material-ui/core/TableContainer';
-// import TableHead from '@material-ui/core/TableHead';
-// import TableRow from '@material-ui/core/TableRow';
-// import Paper from '@material-ui/core/Paper';
-// import Container from 'react-bootstrap/esm/Container';
-// import { Button } from '@material-ui/core';
-
-// const useStyles = makeStyles({
-//     table: {
-//         minWidth: 650,
-//     },
-// });
-
-// function createData(name, calories, fat, carbs, protein, edit, del) {
-//     return { name, calories, fat, carbs, protein, edit, del };
-// }
-
-// const rows = [
-//     createData('IP09673', 'Basil', '$19', ' herbs', ' plant', 'Edit', 'Delete'),
-//     createData('IP09675', 'levender', '$3', 'herbs', ' plant', 'Edit', 'Delete'),
-//     createData('IP09678', 'Basil', '$19', ' herbs', ' plant', 'Edit', 'Delete'),
-//     createData('IP09679', 'levender', '$3', 'herbs', ' plant', 'Edit', 'Delete'),
-
-// ];
-
-// export default function BasicTable() {
-//     const classes = useStyles();
-
-//     return (
-
-//         <TableContainer component={Paper} style={{ marginTop: '50px' }}>
-//             <Container>
-//                 <Table className={classes.table} aria-label="simple table">
-//                     <TableHead>
-//                         <TableRow>
-//                             <TableCell>ProductID</TableCell>
-//                             <TableCell align="right">Product Name</TableCell>
-//                             <TableCell align="right">Price</TableCell>
-//                             <TableCell align="right">detalis</TableCell>
-//                             <TableCell align="right">Catagory</TableCell>
-//                             <TableCell align="right">Edit</TableCell>
-//                             <TableCell align="right">Delete</TableCell>
-//                         </TableRow>
-//                     </TableHead>
-//                     <TableBody>
-//                         {rows.map((row) => (
-//                             <TableRow key={row.name}>
-//                                 <TableCell component="th" scope="row">
-//                                     {row.name}
-//                                 </TableCell>
-//                                 <TableCell align="right">{row.calories}</TableCell>
-//                                 <TableCell align="right">{row.fat}</TableCell>
-//                                 <TableCell align="right">{row.carbs}</TableCell>
-//                                 <TableCell align="right">{row.protein}</TableCell>
-//                                 <TableCell align="right">{row.edit}</TableCell>
-//                                 <TableCell align="right">{row.del}</TableCell>
-
-//                             </TableRow>
-//                         ))}
-//                     </TableBody>
-//                 </Table>
-//             </Container>
-//         </TableContainer>
-//     );
-// }
-
-
-import React from 'react';
-import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import Button from 'react-bootstrap/esm/Button';
 import Container from 'react-bootstrap/esm/Container';
-import Basil from '../../Images/basil.jpg';
-import Lavender from '../../Images/lavender.jpg'
-import Rosmery from '../../Images/rosemary.jpg'
-import Tulip from '../../Images/tulip.jpg';
+import Form from 'react-bootstrap/Form';
+import Table from 'react-bootstrap/Table'
+import { useNavigate } from 'react-router-dom';
+import baseURL from '../../config';
 
 
-export default function App() {
+
+function ViewProductDetails() {
+
+    const [items, setItems] = useState([]);
+    const [search, setSearch] = useState("");
+    const navigate = useNavigate();
+
+    const seller = localStorage.getItem("UserName")
+    const token = localStorage.getItem("Token")
+    const config = {
+        headers: { 'Authorization': `Bearer ${token}` }
+    };
+    useEffect(() => {
+        axios.get(`${baseURL}/seller-item-handler-controller/api/item/getAllItems/${seller}`, config).then((res) => {
+            console.log("first", res.data)
+            setItems(res.data.ItemDetails)
+
+        }).catch(err => {
+            alert(err)
+        })
+    }, [items])
+
+    const deleteRecord = (e) => {
+        axios.delete(`${baseURL}/seller-item-handler-controller/api/item/itemdelete/${e}`, config).then(res => {
+            alert("Item Deleted !")
+        }).catch(err => {
+            alert(err);
+        })
+    }
+
+    const updateDetails = (data) => {
+        navigate('/ViewDetails/ItemUpdate', { state: { data: data } })
+    }
+
     return (
+        <>
+            <Container style={{ backgroundColor: 'white', width: '100%', marginTop: '20px', padding: '20px', borderRadius: '15px' }}>
+                {/* <Container style={{ marginTop: '1%', display: 'block', width: '100%', justifyContent: 'center' }}> */}
+                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2%' }}>
+                    <Button href='/Seller'>Add Products</Button>
+                    <Button style={{ marginLeft: "10px" }} href='/ViewDetails'>View Products</Button>
+                </div>
+                <center>
+                    <Form className="d-flex" style={{ width: '40%', marginTop: '20px' }}>
 
-        <MDBTable align='middle'>
+                        <Form.Control
+                            type="search"
+                            value={search}
+                            placeholder="Search"
+                            className="me-2"
+                            aria-label="Search"
+                            onChange={(e) => { setSearch(e.target.value) }}
+                        />
+                        <Button >Search</Button>
+                    </Form>
+                </center>
 
-            <MDBTableHead>
-                <tr>
-                    <th scope='col'>Product ID</th>
-                    <th scope='col'>Product Name</th>
-                    <th scope='col'>Price</th>
-                    <th scope='col'>Catagory</th>
-                    <th scope='col'>Description</th>
-                    <th scope='col'>Edit</th>
-                    <th scope='col'>Delete</th>
-                </tr>
-            </MDBTableHead>
-            <MDBTableBody>
-                <tr>
-                    <td>
-                        <p>IT546</p>
-                    </td>
-                    <td>
-                        <div className='d-flex align-items-center'>
-                            <img
-                                src={Basil}
-                                alt=''
-                                style={{ width: '45px', height: '45px' }}
-                                className='rounded-circle'
-                            />
-                            <div className='ms-3'>
-                                <p className='fw-bold mb-1'>basil</p>
+                <Table striped bordered hover style={{ width: '100%', justifyContent: 'center', marginTop: '10px' }}>
+                    <thead>
 
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <p className='fw-normal mb-1'>Rs.100.00</p>
+                        <tr>
+                            <th>Index</th>
+                            {/* <th>Item No</th> */}
+                            <th>Item name</th>
+                            <th>Item Category</th>
+                            <th>Seller</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            {/* <th>ManufactureDate</th>
+                            <th>ExpireDate</th> */}
+                            <th>Edit</th>
 
-                    </td>
-                    <td>
-                        <p className='fw-normal mb-1'>flower & herbs</p>
-
-                    </td>
-                    <td>Senior</td>
-                    <td>
-                        <MDBBtn color='link' rounded size='sm'>
-                            Edit
-                        </MDBBtn>
-                    </td>
-                    <td>
-                        <MDBBtn color='link' rounded size='sm'>
-                            Delete
-                        </MDBBtn>
-                    </td>
-                </tr>
-
-            </MDBTableBody>
-        </MDBTable>
-    );
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {items.filter((element) => {
+                            if (search === "") {
+                                return element
+                            } else if ((element.ItemCategory.toLowerCase()).includes(search.toLowerCase())) {
+                                return element
+                            }
+                        }).map((elem, id) => (
+                            <tr key={id} style={{ textAlign: 'center', fontWeight: '400' }}>
+                                <td>{id + 1}</td>
+                                {/* <td>{elem.ItemNo}</td> */}
+                                <td>{elem.ItemName}</td>
+                                <td>{elem.ItemCategory}</td>
+                                <td>{elem.seller}</td>
+                                <td>{elem.Price}</td>
+                                <td>{elem.Description}</td>
+                                {/* <td>{elem.ManufactureDate}</td>
+                                <td>{elem.ExpireDate}</td> */}
+                                <td>
+                                    <Button variant="outline-primary" onClick={() => { updateDetails(elem) }}>Edit</Button>
+                                    <Button style={{ marginLeft: "10px" }} variant="outline-danger" onClick={() => deleteRecord(elem._id)}>Delete</Button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </Table>
+            </Container >
+        </>
+    )
 }
+
+export default ViewProductDetails
