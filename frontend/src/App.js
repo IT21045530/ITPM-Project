@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import React from "react";
 import NavBar from "./Components/NavBar";
 import Blog from "./Pages/Blog";
 import Home from "./Pages/Home";
@@ -24,6 +25,9 @@ import Testpage from "./Pages/Blog_Management/TestPage";
 
 import ThankYou from "./Pages/Product_Management/ThankYou";
 import WelcomeSeller from "./Pages/Product_Management/WelcomeSeller";
+import TextControlsExample from "./Pages/Blog_Management/AddBlog"; //function name  , file path
+
+
 
 import AddMachineForm from "./Pages/Product_Management/AddMachineForm";
 import AddFertilizerForm from "./Pages/Product_Management/AddFertilizerForm";
@@ -70,7 +74,7 @@ function App() {
 
 
 
-
+        { <Route exact path="/AddBlog" element={<TextControlsExample />} /> /*page path , funtion name  */}
 
       </Routes>
       <Footer />
