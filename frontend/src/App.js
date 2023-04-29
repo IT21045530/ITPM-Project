@@ -20,6 +20,7 @@ import PayNow from "./Pages/Product_Management/PayNow";
 
 import Test from "./Pages/Admin_Management/test";
 import Login from "./Pages/Admin_Management/Login";
+import RegisterUser from "./Pages/Admin_Management/RegisterUser";
 import Testpage from "./Pages/Blog_Management/TestPage";
 
 import ThankYou from "./Pages/Product_Management/ThankYou";
@@ -27,6 +28,12 @@ import WelcomeSeller from "./Pages/Product_Management/WelcomeSeller";
 import TextControlsExample from "./Pages/Blog_Management/AddBlog"; //function name  , file path
 
 
+
+import AddMachineForm from "./Pages/Product_Management/AddMachineForm";
+import AddFertilizerForm from "./Pages/Product_Management/AddFertilizerForm";
+import ViewPlant from "./Pages/Product_Management/ViewPlant";
+import ViewMachines from "./Pages/Product_Management/ViewMachines";
+import ViewFertilizer from "./Pages/Product_Management/ViewFertilizer";
 
 function App() {
   return (
@@ -48,14 +55,24 @@ function App() {
         <Route exact path="/ProductTable" element={<ProductTable />} />
 
 
-        <Route exact path="/Admin_Management/test" element={<Test/>} />
-        <Route exact path="/Admin_Management/login" element={<Login/>} />
-        <Route exact path="/Blog_Management/Testpage" element={<Testpage/>}/>
+        <Route exact path="/Test" element={<Test />} />
+        <Route exact path="/Login" element={<Login />} />
+        <Route exact path="/Register" element={<RegisterUser />} />
+
+
+        <Route exact path="/Blog_Management/Testpage" element={<Testpage />} />
 
         <Route exact path="/PaymentForm" element={<PaymentForm />} />
         <Route exact path="/PayNow" element={<PayNow />} />
         <Route exact path="/ThankYou" element={<ThankYou />} />
         <Route exact path="/WelcomeSeller" element={<WelcomeSeller />} />
+        <Route exact path="/AddMachineForm" element={<AddMachineForm />} />
+        <Route exact path="/AddFertilizerForm" element={<AddFertilizerForm />} />
+        <Route exact path="/ViewPlant" element={<ViewPlant />} />
+        <Route exact path="/ViewMachines" element={<ViewMachines />} />
+        <Route exact path="/ViewFertilizer" element={<ViewFertilizer />} />
+
+
 
         { <Route exact path="/AddBlog" element={<TextControlsExample />} /> /*page path , funtion name  */}
 

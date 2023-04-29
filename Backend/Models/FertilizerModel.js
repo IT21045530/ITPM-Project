@@ -2,14 +2,14 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const plantSchema = new Schema({
-    plantID: {
+const FertilizerSchema = new Schema({
+    fertilizerID: {
         type: String,
         required: true,
         unique: true
     },
 
-    plantName: {
+    fertilizerName: {
         type: String,
         required: true
     },
@@ -28,10 +28,10 @@ const plantSchema = new Schema({
         type: String,
         required: true
     },
-    plantImage: {
+    fertlilizerImage: {
         type: String
     }
 });
 
-const plantData = mongoose.model("Plant", plantSchema);
-module.exports = plantData;
+const fertilizerData = mongoose.model("Fertilizer", FertilizerSchema);
+module.exports = fertilizerData;

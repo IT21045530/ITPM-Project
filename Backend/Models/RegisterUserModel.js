@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const plantSchema = new Schema({
+const RegisterUserSchema = new Schema({
     plantID: {
         type: String,
         required: true,
@@ -28,10 +28,7 @@ const plantSchema = new Schema({
         type: String,
         required: true
     },
-    plantImage: {
-        type: String
-    }
 });
 
-const plantData = mongoose.model("Plant", plantSchema);
-module.exports = plantData;
+const RegisterUserData = mongoose.model("RegisterUser", RegisterUserSchema);
+module.exports = RegisterUserData;
