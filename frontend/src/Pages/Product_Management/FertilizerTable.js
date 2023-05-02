@@ -8,30 +8,22 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function ViewProductDetails() {
+function FertilizerTable() {
     const [search, setSearch] = useState("");
-    const [plants, setPlants] = useState([]);
+    const [fertilizers, setFertilizer] = useState([])
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get("http://localhost:4000/api/products/getAllPlants/").then((res) => {
-            console.log("Plants==> ", res.data);
-            setPlants(res.data)
+        axios.get("http://localhost:4000/api/fertilizers/getAllFertilizers").then((res) => {
+            console.log("ffertilizers===>", res.data);
+            setFertilizer(res.data);
         }).catch(err => {
             alert(err);
         })
-    }, [plants])
+    }, [])
 
-    const itemDelete = (e) => {
-        axios.delete(`http://localhost:4000/api/products/deletePlant/${e}`).then(res => {
-            alert("Plant deleted");
-        }).catch(err => {
-            alert(err)
-        })
-    }
-
-    const updatePlantDetails = (data) => {
-        navigate('/plantUpdateDetails', { state: { data: data } })
+    const updateFertilizerDetails = (data) => {
+        navigate("/fertilizerUpdateDetails", { state: { data: data } })
     }
 
     return (
@@ -62,15 +54,15 @@ function ViewProductDetails() {
                     <thead>
                         <tr>
                             <th>Index</th>
-                            <th>Plant Name</th>
-                            <th>Plant Category</th>
+                            <th>Fertilizer Name</th>
+                            <th>Fertilizer Category</th>
                             <th>Price</th>
                             <th>Description</th>
                             <th>Edit</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {plants.filter((element) => {
+                        {fertilizers.filter((element) => {
                             if (search === "") {
                                 return element;
                             } else if ((element.category.toLowerCase()).includes(search.toLocaleLowerCase())) {
@@ -79,13 +71,13 @@ function ViewProductDetails() {
                         }).map((elem, id) => (
                             <tr key={id} style={{ textAlign: 'center', fontWeight: 'bold' }}>
                                 <td>{id + 1}</td>
-                                <td>{elem.plantName}</td>
+                                <td>{elem.fertilizerName}</td>
                                 <td>{elem.category}</td>
                                 <td>{elem.price}</td>
                                 <td>{elem.description}</td>
                                 <td>
-                                    <Button variant="outline-primary" onClick={() => { updatePlantDetails(elem) }} >Edit</Button>
-                                    <Button style={{ marginLeft: "10px" }} variant="outline-danger" onClick={() => itemDelete(elem._id)} >Delete</Button>
+                                    <Button variant="outline-primary" onClick={() => { updateFertilizerDetails(elem) }} >Edit</Button>
+                                    <Button style={{ marginLeft: "10px" }} variant="outline-danger" >Delete</Button>
                                 </td>
                             </tr>
                         ))}
@@ -97,4 +89,4 @@ function ViewProductDetails() {
     )
 }
 
-export default ViewProductDetails
+export default FertilizerTable

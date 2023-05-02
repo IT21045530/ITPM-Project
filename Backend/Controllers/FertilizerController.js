@@ -64,8 +64,35 @@ const getFertilizerDetails = async (req, res) => {
     }
 }
 
+//update a specific fertilizer
+const updateFertilizer = async (req, res) => {
+    const id = req.body.id;
+    const {
+        fertilizerID,
+        fertilizerName,
+        description,
+        price,
+        category
+    } = req.body;
+
+    const newFertilizer = {
+        fertilizerID,
+        fertilizerName,
+        description,
+        price,
+        category
+    };
+
+    await fertilizerModel.findByIdAndUpdate(id, newFertilizer).then(() => {
+        res.status(200).send({ state: "Updates", data: newFertilizer });
+    }).catch((err) => {
+        res.status(400).send({ state: err });
+    })
+}
+
 module.exports = {
     fertilizerInsert,
     getFertilizers,
-    getFertilizerDetails
+    getFertilizerDetails,
+    updateFertilizer
 }
