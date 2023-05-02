@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function ViewPlants() {
+function ViewPlant() {
     const location = useLocation();
     const ID = location.state.props;
     const [plant, setPlant] = useState([]);
@@ -99,4 +99,4 @@ function ViewPlants() {
     )
 }
 
-export default ViewPlants
+export default ViewPlant

@@ -57,7 +57,6 @@ const getMachineDetails = async (req, res) => {
     try {
         const ID = req.params.id;
         const machines = await MachineModel.find({ _id: ID });
-
         res.status(200).send({ status: "Machine data recieved", MachineDetails: machines });
     } catch (error) {
         console.log(error);
@@ -65,8 +64,48 @@ const getMachineDetails = async (req, res) => {
     }
 }
 
+//delete a spacific machine
+const deleteMachine = async (req, res) => {
+    const id = req.params.id;
+    await MachineModel.findByIdAndDelete(id).then(() => {
+        res.status(200).send({ state: "Success" });
+    }).catch((err) => {
+        res.status(400).send({ send: err });
+    })
+}
+
+//update a specific machine item
+const updateMachine = async (req, res) => {
+    const id = req.body.id;
+    const {
+        machineID,
+        machineName,
+        description,
+        price,
+        category,
+    } = req.body;
+
+    console.log("ID==>", id);
+
+    const newMachine = {
+        machineID,
+        machineName,
+        description,
+        price,
+        category,
+    };
+
+    await MachineModel.findByIdAndUpdate(id, newMachine).then(() => {
+        res.status(200).send({ state: "Updates", data: newMachine });
+    }).catch((err) => {
+        res.status(400).send({ state: err });
+    })
+}
+
 module.exports = {
     machineInsert,
     getMachines,
-    getMachineDetails
+    getMachineDetails,
+    deleteMachine,
+    updateMachine
 }

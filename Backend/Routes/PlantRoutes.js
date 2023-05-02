@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { plantInsert, getPlants, getPlantDetails } = require("../Controllers/PlantController");
+const { plantInsert, getPlants, getPlantDetails, deletePlant, updatePlant } = require("../Controllers/PlantController");
 
 const router = express.Router();
 
@@ -12,5 +12,11 @@ router.get("/getAllPlants", getPlants);
 
 //get selected product
 router.get("/getPlant/:id", getPlantDetails);
+
+//delete a specific plant
+router.delete("/deletePlant/:id", deletePlant);
+
+//upadte a specific plant
+router.put("/updataPlant", updatePlant)
 
 module.exports = router;

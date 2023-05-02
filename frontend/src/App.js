@@ -34,6 +34,11 @@ import AddFertilizerForm from "./Pages/Product_Management/AddFertilizerForm";
 import ViewPlant from "./Pages/Product_Management/ViewPlant";
 import ViewMachines from "./Pages/Product_Management/ViewMachines";
 import ViewFertilizer from "./Pages/Product_Management/ViewFertilizer";
+import MachineTable from "./Pages/Product_Management/MachineTable";
+import FertilizerTable from "./Pages/Product_Management/FertilizerTable";
+import PlantUpdate from "./Pages/Product_Management/PlantUpdate";
+import MachineUpdate from "./Pages/Product_Management/MachineUpdate";
+import FertilizerUpdate from "./Pages/Product_Management/FertilizerUpdate";
 
 function App() {
   return (
@@ -71,10 +76,15 @@ function App() {
         <Route exact path="/ViewPlant" element={<ViewPlant />} />
         <Route exact path="/ViewMachines" element={<ViewMachines />} />
         <Route exact path="/ViewFertilizer" element={<ViewFertilizer />} />
+        <Route exact path="/MachineTable" element={<MachineTable />} />
+        <Route exact path="/FertilizerTable" element={<FertilizerTable />} />
+        <Route exact path="/plantUpdateDetails" element={<PlantUpdate />} />
+        <Route exact path="/machineUpdateDetails" element={<MachineUpdate />} />
+        <Route exact path="/fertilizerUpdateDetails" element={<FertilizerUpdate />} />
 
 
 
-        { <Route exact path="/AddBlog" element={<TextControlsExample />} /> /*page path , funtion name  */}
+        {<Route exact path="/AddBlog" element={<TextControlsExample />} /> /*page path , funtion name  */}
 
       </Routes>
       <Footer />
