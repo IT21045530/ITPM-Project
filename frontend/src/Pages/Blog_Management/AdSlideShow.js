@@ -1,23 +1,23 @@
 import React from 'react';
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-import '../Styles/Slider.css'
+import '../../Styles/Slider.css'
 
 
 
 const fadeImages = [
   {
-  url: 'SW1.jpg',
-  caption: 'First Slide'
+    url: 'Robots.jpg',
+    caption: 'First Slide'
   },
   {
-  url: 'SW2.jpg',
-  caption: 'Second Slide'
+    url: 'plntbtn1.jpg',
+    caption: 'Second Slide'
   },
-  {
-  url: 'ThankYou.png',
-  caption: 'Third Slide'
-  }
+  // {
+  //   url: 'tulip.jpg',
+  //   caption: 'Third Slide'
+  // }
 ];
 
 const properties = {
@@ -30,16 +30,17 @@ const properties = {
 
 const AdSlideShow = () => {
   return (
-    <div className = "slideMain">
+    <div className="slideMain">
       <center>
-        <div className="slide-container" style={{height:"50%",borderRadius:"10px",marginTop:'1px'}}>
+        <div className="slide-container">
           <Fade {...properties}>
             {fadeImages.map((fadeImage, index) => (
               <div className="each-fade" key={index} >
                 <div className="image-container">
-                  <img src = {require(`../Images/${fadeImage.url}`)} width='50%' height='50%' style={{marginTop:'20px', borderRadius:"10px"}}/>
+                  <img src={require(`../../Images/${fadeImage.url}`)} style={{ marginTop: '20px', width: '50%', height: '50%' }} />
+                  {/* <img src={require(`../Images/${fadeImage.url}`)} width='50%' height='50%' style={{ marginTop: '20px', borderRadius: "10px" }} /> */}
                 </div>
-                <div style={{padding:'5px'}}>
+                <div style={{ padding: '5px' }}>
                   <h3>{fadeImage.caption}</h3>
                 </div>
               </div>
@@ -52,8 +53,3 @@ const AdSlideShow = () => {
 }
 
 export default AdSlideShow
-   
-
-
-   
-

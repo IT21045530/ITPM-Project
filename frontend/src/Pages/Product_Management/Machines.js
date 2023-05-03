@@ -23,10 +23,6 @@ const useStyles = makeStyles((theme) => ({
 function Machines() {
   const classes = useStyles();
   const navigate = useNavigate();
-
-
-
-
   const [machines, setMachines] = useState([]);
 
   useEffect(() => {

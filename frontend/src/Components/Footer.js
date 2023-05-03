@@ -16,13 +16,8 @@ function Footer() {
     return (
 
 
-        <div >
-            <br /><br /><br /><br />
-
-
-            <Grid
-                container
-                style={{ height: '300px', backgroundColor: 'rgb(60, 179, 113)', display: 'flex', justifyContent: 'center' }}
+        <div style={{ backgroundColor: 'red', marginBottom: '0%' }} >
+            <Grid container style={{ height: '300px', backgroundColor: 'rgb(60, 179, 113)', display: 'flex', justifyContent: 'center' }}
             >
                 <Grid item xs={12} md={6} style={{ height: '100%', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', paddingTop: '5px' }}>
                     <p style={{ color: 'white' }}>Samrt Harvest(PVT) Ltd</p>
