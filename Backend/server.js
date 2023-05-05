@@ -40,6 +40,10 @@ app.use("/api/machines", machineRoute)
 const fertilizerRoute = require("./Routes/FertilizerRoute");
 app.use("/api/fertilizers", fertilizerRoute)
 
+//Blog route
+const BlogRouter = require("./Routes/BlogRoute");
+app.use("/api/Blogs", BlogRouter);
+
 //register user route
 // const RegisterUserRoute = require("./Routes/RegisterUserRoutes");
 // app.use("/api/users", RegisterUseRoute);

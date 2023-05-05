@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import NavBar from "./Components/NavBar";
-import Blog from "./Pages/Blog";
+
 import Home from "./Pages/Home";
 import AddProductForm from "./Pages/Product_Management/AddProductForm";
 import AddProducts from "./Pages/Product_Management/AddProducts";
@@ -21,11 +21,9 @@ import PayNow from "./Pages/Product_Management/PayNow";
 import Test from "./Pages/Admin_Management/test";
 import Login from "./Pages/Admin_Management/Login";
 import RegisterUser from "./Pages/Admin_Management/RegisterUser";
-import Testpage from "./Pages/Blog_Management/TestPage";
 
 import ThankYou from "./Pages/Product_Management/ThankYou";
 import WelcomeSeller from "./Pages/Product_Management/WelcomeSeller";
-import TextControlsExample from "./Pages/Blog_Management/AddBlog"; //function name  , file path
 
 
 
@@ -39,6 +37,11 @@ import FertilizerTable from "./Pages/Product_Management/FertilizerTable";
 import PlantUpdate from "./Pages/Product_Management/PlantUpdate";
 import MachineUpdate from "./Pages/Product_Management/MachineUpdate";
 import FertilizerUpdate from "./Pages/Product_Management/FertilizerUpdate";
+import Blog from "./Pages/Blog_Management/Blog";
+import BloggerPage from "./Pages/Blog_Management/BloggerPage";
+import BlogView from "./Pages/Blog_Management/BlogView";
+import ViewBlogDetails from "./Pages/Blog_Management/ViewBlogDetails";
+import UpdateBlog from "./Pages/Blog_Management/UpdateBlog";
 
 function App() {
   return (
@@ -63,10 +66,6 @@ function App() {
         <Route exact path="/Test" element={<Test />} />
         <Route exact path="/Login" element={<Login />} />
         <Route exact path="/Register" element={<RegisterUser />} />
-
-
-        <Route exact path="/Blog_Management/Testpage" element={<Testpage />} />
-
         <Route exact path="/PaymentForm" element={<PaymentForm />} />
         <Route exact path="/PayNow" element={<PayNow />} />
         <Route exact path="/ThankYou" element={<ThankYou />} />
@@ -81,10 +80,10 @@ function App() {
         <Route exact path="/plantUpdateDetails" element={<PlantUpdate />} />
         <Route exact path="/machineUpdateDetails" element={<MachineUpdate />} />
         <Route exact path="/fertilizerUpdateDetails" element={<FertilizerUpdate />} />
-
-
-
-        {<Route exact path="/AddBlog" element={<TextControlsExample />} /> /*page path , funtion name  */}
+        <Route exact path="/BloggerManagement" element={<BloggerPage />} />
+        <Route exact path="/BlogView" element={<BlogView />} />
+        <Route exact path="/ViewBlogDetails" element={<ViewBlogDetails />} />
+        <Route exact path="/UpdateBlogDetails" element={<UpdateBlog />} />
 
       </Routes>
       <Footer />
