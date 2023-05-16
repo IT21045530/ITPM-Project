@@ -42,7 +42,8 @@ import BloggerPage from "./Pages/Blog_Management/BloggerPage";
 import BlogView from "./Pages/Blog_Management/BlogView";
 import ViewBlogDetails from "./Pages/Blog_Management/ViewBlogDetails";
 import UpdateBlog from "./Pages/Blog_Management/UpdateBlog";
-
+import 'antd/dist/reset.css';
+import AdminDashboard from "./Pages/Admin_Management/AdminDashboard";
 function App() {
   return (
     <>
@@ -84,6 +85,7 @@ function App() {
         <Route exact path="/BlogView" element={<BlogView />} />
         <Route exact path="/ViewBlogDetails" element={<ViewBlogDetails />} />
         <Route exact path="/UpdateBlogDetails" element={<UpdateBlog />} />
+        {localStorage.getItem("userRole") === "admin" && <Route exact path="/AdminDashboard" element={<AdminDashboard />} />}
 
       </Routes>
       <Footer />
