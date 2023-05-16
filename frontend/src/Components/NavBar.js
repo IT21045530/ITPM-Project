@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <>
     <NavLink/>
-    
+
 
 
     </>
