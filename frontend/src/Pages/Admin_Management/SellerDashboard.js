@@ -15,6 +15,7 @@ import ProductTable from '../Product_Management/ProductTable';
 import MachineTable from '../Product_Management/MachineTable';
 import FertilizerTable from '../Product_Management/FertilizerTable';
 import AddProductForm from '../Product_Management/AddProductForm';
+import WelcomeSellerDashboard from './WelcomeSellerDashboard';
 
 
 const { Sider, Content } = Layout;
@@ -22,7 +23,7 @@ const { Sider, Content } = Layout;
 const AdminDashboard = () => {
     const [activeIndex, setActiveIndex] = useState(0)
     const content = [
-        <div></div>,
+        <WelcomeSellerDashboard />,
         // <UsersData />,
         <ProductTable />,
         <MachineTable />,
@@ -38,8 +39,8 @@ const AdminDashboard = () => {
     return (
         <Layout style={{ minHeight: '100vh' }}>
             <Sider width={200} theme="light" collapsible>
-                <Menu mode="inline" theme="light" defaultSelectedKeys={['plants']}>
-                    <Menu.Item key="dashboard"
+                <Menu mode="inline" theme="light" defaultSelectedKeys={['Dashboard']}>
+                    <Menu.Item key="Dashboard"
 
                         onClick={() => {
                             setActiveIndex(0)
