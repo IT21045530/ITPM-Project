@@ -17,6 +17,8 @@ import MachineTable from '../Product_Management/MachineTable';
 import FertilizerTable from '../Product_Management/FertilizerTable';
 import AddProductForm from '../Product_Management/AddProductForm';
 import WelcomeDashboard from './WelcomeDashboard';
+import AddMachineForm from '../Product_Management/AddMachineForm';
+import AddFertilizerForm from '../Product_Management/AddFertilizerForm';
 
 const { Sider, Content } = Layout;
 
@@ -29,6 +31,8 @@ const AdminDashboard = () => {
         <MachineTable />,
         <FertilizerTable />,
         <AddProductForm />,
+        <AddMachineForm />,
+        <AddFertilizerForm />,
         <ViewBlogDetails />,
         <BloggerPage />,
         <div></div>,
@@ -100,25 +104,39 @@ const AdminDashboard = () => {
                             setActiveIndex(5)
                         }}
                         key="addnewproduct" icon={<ShoppingOutlined />}>
-                        Add New Product
+                        Add New Plant
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
                             setActiveIndex(6)
+                        }}
+                        key="addnewmachine" icon={<ShoppingOutlined />}>
+                        Add New Machine
+                    </Menu.Item>
+                    <Menu.Item
+                        onClick={() => {
+                            setActiveIndex(7)
+                        }}
+                        key="addnewfertilizer" icon={<ShoppingOutlined />}>
+                        Add New Fertilizer
+                    </Menu.Item>
+                    <Menu.Item
+                        onClick={() => {
+                            setActiveIndex(8)
                         }}
                         key="blogs" icon={<FormOutlined />}>
                         Blogs
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
-                            setActiveIndex(7)
+                            setActiveIndex(9)
                         }}
                         key="addblog" icon={<AreaChartOutlined />}>
                         Add New Blog
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
-                            setActiveIndex(8)
+                            setActiveIndex(10)
                         }}
                         key="invests" icon={<AreaChartOutlined />}>
                         Invests
