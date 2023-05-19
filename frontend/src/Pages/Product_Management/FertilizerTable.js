@@ -30,11 +30,11 @@ function FertilizerTable() {
         <>
             <Container style={{ backgroundColor: 'white', width: '100%', marginTop: '20px', padding: '20px', borderRadius: '15px' }}>
                 {/* <Container style={{ marginTop: '1%', display: 'block', width: '100%', justifyContent: 'center' }}> */}
-                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2%' }}>
+                {/* <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2%' }}>
                     <Button href='/ProductTable'>Plants</Button>
                     <Button style={{ marginLeft: "10px" }} href='/MachineTable'>Machines</Button>
                     <Button style={{ marginLeft: "10px" }} href='/FertilizerTable'>Fertilizers</Button>
-                </div>
+                </div> */}
                 <center>
                     <Form className="d-flex" style={{ width: '40%', marginTop: '20px' }}>
 

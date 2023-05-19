@@ -96,7 +96,7 @@ app.post('/addUser', async (req, res) => {
 
     try {
         // Check if the requesting user is an admin
-       
+
 
         // Check if the user already exists
         const existingUser = await User.findOne({ email });
@@ -159,6 +159,19 @@ app.delete("/:id", async (req, res) => {
         return res.status(200).json({ "message": "deleted sucessfully" })
     }).catch(err => {
         console.log(err)
+        return res.status(500).json({ err })
+    })
+})
+
+app.get("/get-by-email/:email", async (req, res) => {
+    const email = req.params.email;
+    return await User.find({ email }).then((user) => {
+        if (user) {
+            return res.status(200).json({ user })
+        } else {
+            return res.status(404).json({ "message": "no user found" })
+        }
+    }).catch(err => {
         return res.status(500).json({ err })
     })
 })
