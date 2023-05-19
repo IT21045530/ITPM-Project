@@ -1,21 +1,19 @@
-import React, { useEffect } from 'react'
-import AdSlideShow from './Blog_Management/AdSlideShow'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect } from "react";
+import HomeSlideShow from "./Blog_Management/HomeSlideShow";
+import { useNavigate } from "react-router-dom";
 function Home() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   useEffect(() => {
     if (!localStorage.getItem("token")) {
-      navigate("/Register")
+      navigate("/Register");
     }
-
-  }, [])
+  }, []);
 
   return (
     <div>
-      <AdSlideShow />
-
+      <HomeSlideShow />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

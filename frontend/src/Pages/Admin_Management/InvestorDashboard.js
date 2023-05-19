@@ -111,7 +111,14 @@ const AdminDashboard = () => {
                             setActiveIndex(1)
                         }}
                         key="invests" icon={<AreaChartOutlined />}>
-                        Invests
+                        Investers
+                    </Menu.Item>
+                    <Menu.Item
+                        onClick={() => {
+                            setActiveIndex(2)
+                        }}
+                        key="lands" icon={<AreaChartOutlined />}>
+                        Lands
                     </Menu.Item>
                     {/* <Menu.Item
                         onClick={() => {

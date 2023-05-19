@@ -1,20 +1,20 @@
-import React from 'react'
+import React , {useState} from 'react';
 
-const WelcomeDashboard = () => {
+function DashboardRM() {
 
-  function next_investor(){
-    window.location.href= "../Resource_Managemnt/InvesterManaging";
-  }
-
-  function next_land(){
-      window.location.href="../Resource_Managemnt/LandManaging";
-  }
+    function next_investor(){
+        window.location.href= "../Resource_Managemnt/InvesterManaging";
+    }
+    
+    function next_land(){
+        window.location.href="../Resource_Managemnt/LandManaging";
+    }
 
   return (
-    <div> 
-      <div className='text-center rounded' style={{backgroundColor: '#3cb371', paddingTop: '5%', paddingBottom: '4%'}}>
-            <h1 className='text-uppercase text-white'>Welcome To Investor Manager Dashboard</h1>
-            <span className='text-uppercase' style={{color:'#9CB693'}}></span>
+    <div>
+        <div className='text-center' style={{backgroundColor: '#243A1D', paddingTop: '5%', paddingBottom: '4%'}}>
+            <h1 className='text-uppercase text-white'>Resource Management Dashboard</h1>
+            <span className='text-uppercase' style={{color:'#9CB693'}}>HOME / Resource Dashboard</span>
         </div>
         <div className='container'>
             <div className='row' style={{paddingTop:'5%' , paddingBottom :'5%'}}>
@@ -52,4 +52,4 @@ const WelcomeDashboard = () => {
   )
 }
 
-export default WelcomeDashboard
+export default DashboardRM;
