@@ -89,11 +89,11 @@ function HomeSlider() {
           }}
         >
           <h1 className="text-uppercase text-white">
-            Resource Management Dashboard
+            Introducing Smart Farming
           </h1>
-          <span className="text-uppercase" style={{ color: "white" }}>
+          {/* <span className="text-uppercase" style={{ color: "white" }}>
             HOME / Resource Dashboard
-          </span>
+          </span> */}
         </div>
         <div className="container">
           <div
@@ -104,25 +104,32 @@ function HomeSlider() {
               <div class="card">
                 <div class="card-body text-center">
                   <img
-                    src="../img/land.png"
+                    src="https://www.avanti-europe.ch/wp-content/uploads/2020/02/QA-service-300x291.png" //                    src="../img/land.png"
                     class="card-img-top"
                     alt="..."
                     style={{ width: "25%" }}
                   />
-                  <h2 class="card-title text-uppercase pt-4">
-                    Lands Managment
-                  </h2>
+                  <h2 class="card-title text-uppercase pt-4">Our Services</h2>
                   <p>
-                    Land management refers to the process of overseeing and
-                    making decisions about the use, development, and
-                    conservation of land resources. It involves a range of
-                    activities aimed at optimizing the economic, social, and
-                    environmental benefits derived from land.
+                    We offer a comprehensive range of smart farming services
+                    that harness cutting-edge technologies to revolutionize
+                    agricultural practices. Our services are designed to enhance
+                    productivity, optimize resource utilization, and promote
+                    sustainable farming methods.
                   </p>
                 </div>
                 <div className="card-footer">
                   <div className="text-end pt-3 pb-3">
-                  <center> <button className="btn btn-outline-dark">Next</button> </center>                  </div>
+                    <center>
+                      {" "}
+                      <button
+                        href="/ViewProducts"
+                        className="btn btn-outline-dark"
+                      >
+                        Go to Our Services
+                      </button>{" "}
+                    </center>{" "}
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,25 +137,28 @@ function HomeSlider() {
               <div class="card">
                 <div class="card-body text-center">
                   <img
-                    src="../img/investing.png"
+                    src="https://img.freepik.com/free-vector/blogging-illustration-concept_114360-851.jpg?w=2000"
                     class="card-img-top"
                     alt="..."
                     style={{ width: "25%" }}
                   />
-                  <h2 class="card-title text-uppercase pt-4">
-                    Investers Managment
-                  </h2>
+                  <h2 class="card-title text-uppercase pt-4">Blogs</h2>
                   <p>
-                    Land management refers to the process of overseeing and
-                    making decisions regarding the use, development, and
-                    conservation of land resources. It involves various
-                    activities aimed at optimizing land utilization while
-                    considering social, economic,
+                    Welcome to the Smart Harvest blogs. Your go-to resource for
+                    all things smart farming! Here, we share insightful
+                    articles, expert tips, and the latest industry trends to
+                    help farmers and agricultural enthusiasts stay informed and
+                    inspired.
                   </p>
                 </div>
                 <div className="card-footer">
                   <div className="text-end pt-3 pb-3">
-                  <center> <button className="btn btn-outline-dark">Next</button> </center>
+                    <center>
+                      {" "}
+                      <button className="btn btn-outline-dark">
+                        Go to Blogs
+                      </button>{" "}
+                    </center>
                   </div>
                 </div>
               </div>
@@ -173,115 +183,98 @@ function HomeSlider() {
             HOME / Resource Dashboard
           </span>
         </div> */}
-        
+
         <div>
-        <div
-          className="text-center"
-          style={{
-            backgroundColor: "#3cb371",
-            paddingTop: "5%",
-            paddingBottom: "4%",
-          }}
-        >
-          <h1 className="text-uppercase text-white">
-            Resource Management Dashboard
-          </h1>
-          <span className="text-uppercase" style={{ color: "white" }}>
-            HOME / Resource Dashboard
-          </span>
-        </div>
-        <div className="container">
           <div
-            className="row"
-            style={{ paddingTop: "5%", paddingBottom: "5%" }}
+            className="text-center"
+            style={{
+              backgroundColor: "#3cb371",
+              paddingTop: "5%",
+              paddingBottom: "4%",
+            }}
           >
-            <div className="col">
-              <div class="card">
-                <div class="card-body text-center">
-                  <img
-                    src="../img/land.png"
-                    class="card-img-top"
-                    alt="..."
-                    style={{ width: "25%" }}
-                  />
-                  <h2 class="card-title text-uppercase pt-4">
-                    Lands Managment
-                  </h2>
-                  <p>
-                    Land management refers to the process of overseeing and
-                    making decisions about the use, development, and
-                    conservation of land resources. It involves a range of
-                    activities aimed at optimizing the economic, social, and
-                    environmental benefits derived from land.
-                  </p>
-                </div>
-                <div className="card-footer">
-                  <div className="text-end pt-3 pb-3">
-                  <center> <button className="btn btn-outline-dark">Next</button> </center>                  </div>
+            <h1 className="text-uppercase text-white">
+              Mission / Vision / About Us
+            </h1>
+            {/* <span className="text-uppercase" style={{ color: "white" }}>
+              HOME / Resource Dashboard
+            </span> */}
+          </div>
+          <div className="container">
+            <div
+              className="row"
+              style={{ paddingTop: "5%", paddingBottom: "5%" }}
+            >
+              <div className="col">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <img
+                      src="https://www.clipartmax.com/png/full/202-2027635_our-mission-mission-vision-icon-png.png"
+                      class="card-img-top"
+                      alt="..."
+                      style={{ width: "25%" }}
+                    />
+                    <h2 class="card-title text-uppercase pt-4">Mission</h2>
+                    <p>
+                      Our mission is to transform agriculture through smart
+                      farming technologies, empowering farmers with innovative
+                      solutions that enhance productivity, optimize resource
+                      utilization, and promote sustainability. We aim to
+                      revolutionize farming practices and contribute to a more
+                      efficient, profitable, and environmentally conscious
+                      agricultural industry.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col">
-              <div class="card">
-                <div class="card-body text-center">
-                  <img
-                    src="../img/investing.png"
-                    class="card-img-top"
-                    alt="..."
-                    style={{ width: "25%" }}
-                  />
-                  <h2 class="card-title text-uppercase pt-4">
-                    Investers Managment
-                  </h2>
-                  <p>
-                    Land management refers to the process of overseeing and
-                    making decisions regarding the use, development, and
-                    conservation of land resources. It involves various
-                    activities aimed at optimizing land utilization while
-                    considering social, economic,
-                  </p>
+              <div className="col">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJLEB3lqbrM2b6Qirwlw6qPGOcsaJ0aymSEcUnK-TyS0TwZPPeufO-9_9arMqa0wk9i74&usqp=CAU"
+                      class="card-img-top"
+                      alt="..."
+                      style={{ width: "25%" }}
+                    />
+                    <h2 class="card-title text-uppercase pt-4">Vision</h2>
+                    <p>
+                      Our vision is to lead the way in shaping the future of
+                      farming by driving the adoption of smart farming
+                      technologies worldwide. We envision a world where
+                      precision agriculture, automation, and data-driven
+                      decision-making are commonplace, enabling farmers to
+                      achieve higher yields, reduce environmental impact, and
+                      ensure food security for all.
+                    </p>
+                  </div>
                 </div>
-                <div className="card-footer">
-                  <div className="text-end pt-3 pb-3">
-                  <center> <button className="btn btn-outline-dark">Next</button> </center>
+              </div>
+
+              <div className="col">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <img
+                      src="https://st2.depositphotos.com/30291372/46142/v/600/depositphotos_461424770-stock-illustration-flat-vector-illustration-for-about.jpg"
+                      class="card-img-top"
+                      alt="..."
+                      style={{ width: "28%" }}
+                    />
+                    <h2 class="card-title text-uppercase pt-4">About Us</h2>
+                    <p>
+                      At Smart Harvest, we are a pioneering smart farming
+                      solutions provider. With a passion for innovation and
+                      sustainability, we empower farmers with cutting-edge
+                      technologies to optimize crop production, reduce resource
+                      wastage, and promote environmentally friendly farming
+                      practices. Join us on the journey to revolutionize
+                      agriculture for a brighter future.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div className="col">
-              <div class="card">
-                <div class="card-body text-center">
-                  <img
-                    src="../img/investing.png"
-                    class="card-img-top"
-                    alt="..."
-                    style={{ width: "25%" }}
-                  />
-                  <h2 class="card-title text-uppercase pt-4">
-                    Investers Managment
-                  </h2>
-                  <p>
-                    Land management refers to the process of overseeing and
-                    making decisions regarding the use, development, and
-                    conservation of land resources. It involves various
-                    activities aimed at optimizing land utilization while
-                    considering social, economic,
-                  </p>
-                </div>
-                <div className="card-footer">
-                  <div className="text-end pt-3 pb-3">
-                  <center> <button className="btn btn-outline-dark">Next</button> </center>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
-      </div>
-
-
       </div>
     </>
   );
