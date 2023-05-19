@@ -15,6 +15,8 @@ import ProductTable from '../Product_Management/ProductTable';
 import MachineTable from '../Product_Management/MachineTable';
 import FertilizerTable from '../Product_Management/FertilizerTable';
 import AddProductForm from '../Product_Management/AddProductForm';
+import AddMachineForm from '../Product_Management/AddMachineForm';
+import AddFertilizerForm from '../Product_Management/AddFertilizerForm';
 import WelcomeSellerDashboard from './WelcomeSellerDashboard';
 
 
@@ -29,6 +31,8 @@ const AdminDashboard = () => {
         <MachineTable />,
         <FertilizerTable />,
         <AddProductForm />,
+        <AddMachineForm />,
+        <AddFertilizerForm />,
         <ViewBlogDetails />,
         <div></div>,
         <div></div>,
@@ -96,7 +100,21 @@ const AdminDashboard = () => {
                             setActiveIndex(4)
                         }}
                         key="addnewproduct" icon={<ShoppingOutlined />}>
-                        Add New Product
+                        Add New Plant
+                    </Menu.Item>
+                    <Menu.Item
+                        onClick={() => {
+                            setActiveIndex(5)
+                        }}
+                        key="addnewmachine" icon={<ShoppingOutlined />}>
+                        Add New Machine
+                    </Menu.Item>
+                    <Menu.Item
+                        onClick={() => {
+                            setActiveIndex(6)
+                        }}
+                        key="addnewfertilizer" icon={<ShoppingOutlined />}>
+                        Add New Fertilizer
                     </Menu.Item>
                     {/* <Menu.Item
                         onClick={() => {

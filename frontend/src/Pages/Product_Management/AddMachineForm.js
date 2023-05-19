@@ -72,7 +72,7 @@ function AddMachineForm() {
                     <div className={classes.root}>
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
-                                <Button variant="outline-success" href='/AddProductForm'>
+                                {/* <Button variant="outline-success" href='/AddProductForm'>
                                     Plants
                                 </Button>
                                 <Button variant="outline-success" href='/AddMachineForm'>
@@ -80,7 +80,7 @@ function AddMachineForm() {
                                 </Button>
                                 <Button variant="outline-success" href='/AddFertilizerForm'>
                                     Fertilizers
-                                </Button>
+                                </Button> */}
                             </Grid>
                         </Grid>
                     </div >
@@ -136,7 +136,7 @@ function AddMachineForm() {
                     </center>
                 </Form>
 
-            </Container>
+            </Container><br></br> <br></br><br></br> <br></br><br></br> <br></br>
         </>
     );
 }
