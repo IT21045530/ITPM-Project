@@ -76,7 +76,7 @@ function BloggerPage() {
                 </center >
             </Container >
             <Container style={{ backgroundColor: 'LightGray', marginTop: '60px', width: '80%', padding: '40px', borderRadius: '5px' }}>
-                <h1>This is the add blog section</h1>
+                <h1>Add a new blog </h1>
                 <br />
                 <Form onSubmit={Validate} >
                     <Row className="mb-3">
