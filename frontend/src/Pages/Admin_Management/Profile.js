@@ -75,6 +75,7 @@ const Profile = () => {
                     style={{ minWidth: '600px' }}
                 >
                     <Form.Item
+                        label="First Name"
                         name="firstName"
                         rules={[{ required: true, message: 'Please input your first name!' }]}
                     >
@@ -82,6 +83,7 @@ const Profile = () => {
                     </Form.Item>
 
                     <Form.Item
+                        label="Last Name"
                         name="lastName"
                         rules={[{ required: true, message: 'Please input your last name!' }]}
                     >
@@ -89,6 +91,7 @@ const Profile = () => {
                     </Form.Item>
 
                     <Form.Item
+                        label="Email"
                         name="email"
                         rules={[
                             {
