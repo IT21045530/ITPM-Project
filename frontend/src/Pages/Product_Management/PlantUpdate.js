@@ -9,6 +9,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import axios from "axios"
 import { useLocation, useNavigate } from "react-router-dom";
+import AdminDashboard from '../Admin_Management/SellerDashboard';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -75,7 +77,7 @@ function PlantUpdate() {
     return (
         <>
             <Container style={{ backgroundColor: 'LightGray', marginTop: '60px', width: '80%', padding: '40px', borderRadius: '5px', marginBottom: '45px' }}>
-                <h1>This is the add plant section</h1>
+                <h1 style={{ fontFamily: 'Century Gothic', fontWeight: 'bold', textAlign: 'center' }}>This Is The Plant Update Section.</h1>
 
                 <Form onSubmit={Validate}>
                     <Row className="mb-3">

@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
+import { Divider, Grid } from '@material-ui/core';
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
 
@@ -67,12 +67,12 @@ function AddMachineForm() {
 
     return (
         <>
-            <Container >
+            {/* <Container >
                 <center>
                     <div className={classes.root}>
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
-                                {/* <Button variant="outline-success" href='/AddProductForm'>
+                                <Button variant="outline-success" href='/AddProductForm'>
                                     Plants
                                 </Button>
                                 <Button variant="outline-success" href='/AddMachineForm'>
@@ -80,43 +80,44 @@ function AddMachineForm() {
                                 </Button>
                                 <Button variant="outline-success" href='/AddFertilizerForm'>
                                     Fertilizers
-                                </Button> */}
+                                </Button>
                             </Grid>
                         </Grid>
                     </div >
                 </center >
-            </Container >
-            <Container style={{ backgroundColor: 'LightGray', marginTop: '60px', width: '80%', padding: '40px', borderRadius: '5px' }}>
-                <h1>This is the add machines section</h1>
-
+            </Container > */}
+            <Container style={{ backgroundColor: 'LightGray', marginTop: '20px', width: '80%', padding: '40px', borderRadius: '5px', marginBottom: '40px' }}>
+                <h1 style={{ fontFamily: 'Century Gothic', fontWeight: 'bold', textAlign: 'center' }}>This Is The Add Machines Section</h1>
+                <Divider /><br />
                 <Form onSubmit={Validate}>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="formGridProductID">
-                            <Form.Label>Machine ID</Form.Label>
+                            <Form.Label>Machine ID: </Form.Label>
                             <Form.Control type="text" placeholder="Enter ProductID" onChange={(e) => { setMachineID(e.target.value) }} />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridProductID">
-                            <Form.Label>Machine Name</Form.Label>
+                            <Form.Label>Machine Name: </Form.Label>
                             <Form.Control type="text" placeholder="Product name" onChange={(e) => { setMachineName(e.target.value) }} />
                         </Form.Group>
                     </Row>
 
                     <Form.Group className="mb-3" controlId="formGridDescription">
-                        <Form.Label>Description</Form.Label>
+                        <Form.Label>Description: </Form.Label>
                         <Form.Control as="textarea" rows={3} placeholder='Description' onChange={(e) => { setDescription(e.target.value) }} />
                     </Form.Group>
 
 
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="formGridPrice">
-                            <Form.Label>Price</Form.Label>
+                            <Form.Label>Price: </Form.Label>
                             <Form.Control type="text" onChange={(e) => { setPrice(e.target.value) }} />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridCatagory">
-                            <Form.Label>Catagory</Form.Label>
+                            <Form.Label>Catagory: </Form.Label>
                             <Form.Select onChange={(e) => { setCategory(e.target.value) }}>
+                                <option >--Select a Machine category--</option>
                                 <option value="Spray items">Spray items</option>
                                 <option value="elecric items">elecric items</option>
                                 <option value="others">others</option>
@@ -136,7 +137,7 @@ function AddMachineForm() {
                     </center>
                 </Form>
 
-            </Container><br></br> <br></br><br></br> <br></br><br></br> <br></br>
+            </Container>
         </>
     );
 }

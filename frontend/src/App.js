@@ -96,6 +96,7 @@ function App() {
         {localStorage.getItem("userRole") === "admin" && <Route exact path="/AdminDashboard" element={<AdminDashboard />} />}
         {localStorage.getItem("userRole") === "seller" && <Route exact path="/SellerDashboard" element={<SellerDashboard />} />}
         {localStorage.getItem("userRole") === "investor" && <Route exact path="/InvestorDashboard" element={<InvestorDashboard />} />}
+        <Route exact path="/payment" element={<PaymentForm />} />
       </Routes>
       <Footer />
       {/* <div className="App">

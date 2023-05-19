@@ -75,7 +75,7 @@ function MachineUpdate() {
     return (
         <>
             <Container style={{ backgroundColor: 'LightGray', marginTop: '60px', width: '80%', padding: '40px', borderRadius: '5px', marginBottom: '45px' }}>
-                <h1>This is the add Machine section</h1>
+                <h1 style={{ fontFamily: 'Century Gothic', fontWeight: 'bold', textAlign: 'center' }}>This Is The Machine Update Section</h1>
 
                 <Form onSubmit={Validate}>
                     <Row className="mb-3">

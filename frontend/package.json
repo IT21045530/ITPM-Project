@@ -16,6 +16,7 @@
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.5.28",
     "mdb-react-ui-kit": "^6.0.0",
+    "mdb-ui-kit": "^6.3.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",

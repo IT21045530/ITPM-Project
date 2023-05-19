@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/esm/Container';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table'
 import { useNavigate } from 'react-router-dom';
-
+import ReportGenerator from '../../Components/ReportGenerator';
 
 
 function MachineTable() {
@@ -30,19 +30,16 @@ function MachineTable() {
         })
     }
 
+    const columnsPDF = [{ Machine_Name: 'Machine_Name', Category: 'Category', Price: 'Price', Description: 'Description' }]
+
+
     const updateMechineDetails = (data) => {
         navigate("/machineUpdateDetails", { state: { data: data } })
     }
 
     return (
         <>
-            <Container style={{ backgroundColor: 'white', width: '100%', marginTop: '20px', padding: '20px', borderRadius: '15px' }}>
-                {/* <Container style={{ marginTop: '1%', display: 'block', width: '100%', justifyContent: 'center' }}> */}
-                {/* <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2%' }}>
-                    <Button href='/ProductTable'>Plants</Button>
-                    <Button style={{ marginLeft: "10px" }} href='/MachineTable'>Machines</Button>
-                    <Button style={{ marginLeft: "10px" }} href='/FertilizerTable'>Fertilizers</Button>
-                </div> */}
+            <Container style={{ backgroundColor: 'white', width: '100%', marginTop: '20px', padding: '20px', borderRadius: '15px', marginBottom: '40px' }}>
                 <center>
                     <Form className="d-flex" style={{ width: '40%', marginTop: '20px' }}>
 
@@ -68,6 +65,7 @@ function MachineTable() {
                             <th>Price</th>
                             <th>Description</th>
                             <th>Edit</th>
+                            <th>Delete</th>
 
                         </tr>
                     </thead>
@@ -87,6 +85,8 @@ function MachineTable() {
                                 <td>{elem.description}</td>
                                 <td>
                                     <Button variant="outline-primary" onClick={() => { updateMechineDetails(elem) }} >Edit</Button>
+                                </td>
+                                <td>
                                     <Button style={{ marginLeft: "10px" }} variant="outline-danger" onClick={() => machineDelete(elem._id)} >Delete</Button>
                                 </td>
                             </tr>
@@ -94,6 +94,15 @@ function MachineTable() {
                     </thead>
 
                 </Table>
+                <Button varient="outline-primary"
+                    onClick={() => ReportGenerator(
+                        machines.map(e => ({
+                            Machine_Name: e.machineName,
+                            Category: e.category,
+                            Price: e.price,
+                            Description: e.description.substring(0, 100) + '...'
+                        }
+                        )), columnsPDF, false, "All the machines details")} style={{ marginBottom: 20 }}>Download Machine Details</Button>
             </Container >
         </>
     )

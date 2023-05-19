@@ -37,8 +37,8 @@ function FertilizerUpdate() {
             const fertilizerData = location.state.data;
             console.log("fertilizerData=>>", fertilizerData)
 
-            setFertilizerID(fertilizerData.plantID);
-            setFertilizerName(fertilizerData.plantName);
+            setFertilizerID(fertilizerData.fertilizerID);
+            setFertilizerName(fertilizerData.fertilizerName);
             setDescription(fertilizerData.description);
             setPrice(fertilizerData.price);
             setCategory(fertilizerData.category);
@@ -75,7 +75,7 @@ function FertilizerUpdate() {
     return (
         <>
             <Container style={{ backgroundColor: 'LightGray', marginTop: '60px', width: '80%', padding: '40px', borderRadius: '5px', marginBottom: '45px' }}>
-                <h1>This is the add plant section</h1>
+                <h1 style={{ fontFamily: 'Century Gothic', fontWeight: 'bold', textAlign: 'center' }}>This Is The Fertilizer Update Section</h1>
 
                 <Form onSubmit={Validate}>
                     <Row className="mb-3">

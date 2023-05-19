@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/esm/Container';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table'
 import { useNavigate } from 'react-router-dom';
-
+import ReportGenerator from '../../Components/ReportGenerator';
 
 
 function FertilizerTable() {
@@ -20,21 +20,26 @@ function FertilizerTable() {
         }).catch(err => {
             alert(err);
         })
-    }, [])
+    }, [fertilizers])
 
     const updateFertilizerDetails = (data) => {
         navigate("/fertilizerUpdateDetails", { state: { data: data } })
     }
 
+    const deletfertilizer = (e) => {
+        axios.delete(`http://localhost:4000/api/fertilizers/deleteFertlizer/${e}`).then(res => {
+            alert("Fertilizer deleted");
+        }).catch(err => {
+            alert(err)
+        })
+    }
+
+    const columnsPDF = [{ Fertilizer_Name: 'Fertilizer_Name', Category: 'Category', Price: 'Price', Description: 'Description' }]
+
+
     return (
         <>
-            <Container style={{ backgroundColor: 'white', width: '100%', marginTop: '20px', padding: '20px', borderRadius: '15px' }}>
-                {/* <Container style={{ marginTop: '1%', display: 'block', width: '100%', justifyContent: 'center' }}> */}
-                {/* <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2%' }}>
-                    <Button href='/ProductTable'>Plants</Button>
-                    <Button style={{ marginLeft: "10px" }} href='/MachineTable'>Machines</Button>
-                    <Button style={{ marginLeft: "10px" }} href='/FertilizerTable'>Fertilizers</Button>
-                </div> */}
+            <Container style={{ backgroundColor: 'white', width: '100%', marginTop: '20px', padding: '20px', borderRadius: '15px', marginBottom: '40px' }}>
                 <center>
                     <Form className="d-flex" style={{ width: '40%', marginTop: '20px' }}>
 
@@ -59,6 +64,7 @@ function FertilizerTable() {
                             <th>Price</th>
                             <th>Description</th>
                             <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -77,13 +83,24 @@ function FertilizerTable() {
                                 <td>{elem.description}</td>
                                 <td>
                                     <Button variant="outline-primary" onClick={() => { updateFertilizerDetails(elem) }} >Edit</Button>
-                                    <Button style={{ marginLeft: "10px" }} variant="outline-danger" >Delete</Button>
+                                </td>
+                                <td>
+                                    <Button style={{ marginLeft: "10px" }} variant="outline-danger" onClick={() => deletfertilizer(elem._id)} >Delete</Button>
                                 </td>
                             </tr>
                         ))}
                     </tbody>
 
                 </Table>
+                <Button varient="outline-primary"
+                    onClick={() => ReportGenerator(
+                        fertilizers.map(e => ({
+                            Fertilizer_Name: e.fertilizerName,
+                            Category: e.category,
+                            Price: e.price,
+                            Description: e.description.substring(0, 100) + '...'
+                        }
+                        )), columnsPDF, false, "All the Fertilizer details")} style={{ marginBottom: 20 }}>Download Fertilizer Details</Button>
             </Container >
         </>
     )
