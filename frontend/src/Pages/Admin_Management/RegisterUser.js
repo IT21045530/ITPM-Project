@@ -62,7 +62,9 @@ const RegisterUser = () => {
         justifyContent: "center"
       }}
     >
+      <br></br><br></br>
       <h2 className="register-user__title">Create an account</h2>
+      <br></br><br></br>
       <Card
         style={{
           width: "80vw"
@@ -120,7 +122,7 @@ const RegisterUser = () => {
             })}
           >Login Now</span> </Title>
         </div>
-      </Card>
+      </Card><br></br><br></br>
     </div>
   );
 };
