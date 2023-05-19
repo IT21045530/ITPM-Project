@@ -60,7 +60,7 @@ const Profile = () => {
                     justifyContent: "space-around",
                 }}
             >
-                <Title style={3}>Profile</Title>
+                <center><Title style={3}>User Profile</Title></center>
                 <Form
 
                     form={form}
@@ -107,7 +107,7 @@ const Profile = () => {
                         <Input placeholder="Email" />
                     </Form.Item>
                     <Form.Item>
-                        <Button type="primary" htmlType="submit">
+                        <center><Button type="primary" htmlType="submit">
                             Update
                         </Button>
                         <Button
@@ -118,7 +118,7 @@ const Profile = () => {
                             }}
                             style={{ marginLeft: '10px' }}>
                             Delete
-                        </Button>
+                        </Button></center>
                     </Form.Item>
                 </Form>
             </Card>
