@@ -34,7 +34,8 @@ function NavLink() {
             <Nav.Link className='btnLink' href="/BloggerManagement" >Blogger</Nav.Link>
           </Nav>
           <Form className="d-flex">
-            <Button href="/Login" variant="outline-success">Login</Button>
+            {/* <Button href="/Login" variant="outline-success">Login</Button> */}
+            <Button href="/LoginPage" variant="outline-success">Login</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

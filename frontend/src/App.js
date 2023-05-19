@@ -42,6 +42,7 @@ import BloggerPage from "./Pages/Blog_Management/BloggerPage";
 import BlogView from "./Pages/Blog_Management/BlogView";
 import ViewBlogDetails from "./Pages/Blog_Management/ViewBlogDetails";
 import UpdateBlog from "./Pages/Blog_Management/UpdateBlog";
+import LoginNew from "./Pages/Admin_Management/LoginNew";
 
 function App() {
   return (
@@ -84,6 +85,7 @@ function App() {
         <Route exact path="/BlogView" element={<BlogView />} />
         <Route exact path="/ViewBlogDetails" element={<ViewBlogDetails />} />
         <Route exact path="/UpdateBlogDetails" element={<UpdateBlog />} />
+        <Route exact path="/LoginPage" element={<LoginNew />} />
 
       </Routes>
       <Footer />

@@ -10,7 +10,7 @@ function BlogSlider() {
                     <img
                         className="d-block w-100"
                         src="https://nigeriacic.org/wp-content/uploads/2017/07/SA-1000x500-1.jpg"
-                        alt="First slide"
+                    //alt="First slide"
                     />
                     <Carousel.Caption>
                         {/*01*/}
@@ -22,7 +22,7 @@ function BlogSlider() {
                     <img
                         className="d-block w-100"
                         src="https://www.horizonbank.com/images/default-source/advice-images-1000x500/ag_2.jpg?sfvrsn=b0a732d_1"
-                        alt="Second slide"
+                    //alt="Second slide"
                     />
 
                     <Carousel.Caption>
@@ -35,7 +35,7 @@ function BlogSlider() {
                     <img
                         className="d-block w-100"
                         src="https://www.daviteq.com/blog/wp-content/uploads/2020/07/SmartAgri.png"
-                        alt="Third slide"
+                    //alt="Third slide"
                     />
 
                     <Carousel.Caption>
@@ -49,7 +49,7 @@ function BlogSlider() {
                     <img
                         className="d-block w-100"
                         src="https://article.murata.com/sites/default/files/styles/medium/public/static/ja-jp/images/article/future-of-smart-agriculture-using-iiot/agriculture-main0001.png?itok=rwLeLvt_"
-                        alt="Forth slide"
+                    //alt="Forth slide"
                     />
                     <Carousel.Caption>
                         {" "}
