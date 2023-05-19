@@ -62,7 +62,9 @@ const RegisterUser = () => {
         justifyContent: "center"
       }}
     >
+      <br></br><br></br>
       <h2 className="register-user__title">Create an account</h2>
+      <br></br><br></br>
       <Card
         style={{
           width: "80vw"
@@ -82,7 +84,7 @@ const RegisterUser = () => {
             <Select>
               <Option value="user">User</Option>
               <Option value="seller">Seller</Option>
-              <Option value="investor">Investor</Option>
+              {/* <Option value="investor">Investor</Option> */}
             </Select>
           </Form.Item>
           <Form.Item label="Password" name="password" rules={[{ required: true, message: 'Please enter a password' }]}>
@@ -120,7 +122,7 @@ const RegisterUser = () => {
             })}
           >Login Now</span> </Title>
         </div>
-      </Card>
+      </Card><br></br><br></br>
     </div>
   );
 };

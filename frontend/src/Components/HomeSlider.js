@@ -104,7 +104,7 @@ function HomeSlider() {
               <div class="card">
                 <div class="card-body text-center">
                   <img
-                    src="../img/land.png"
+                    src="https://www.avanti-europe.ch/wp-content/uploads/2020/02/QA-service-300x291.png" //                    src="../img/land.png"
                     class="card-img-top"
                     alt="..."
                     style={{ width: "25%" }}
@@ -122,7 +122,10 @@ function HomeSlider() {
                   <div className="text-end pt-3 pb-3">
                     <center>
                       {" "}
-                      <button href="/ViewProducts" className="btn btn-outline-dark">
+                      <button
+                        href="/ViewProducts"
+                        className="btn btn-outline-dark"
+                      >
                         Go to Our Services
                       </button>{" "}
                     </center>{" "}
@@ -134,7 +137,7 @@ function HomeSlider() {
               <div class="card">
                 <div class="card-body text-center">
                   <img
-                    src="../img/investing.png"
+                    src="https://img.freepik.com/free-vector/blogging-illustration-concept_114360-851.jpg?w=2000"
                     class="card-img-top"
                     alt="..."
                     style={{ width: "25%" }}
