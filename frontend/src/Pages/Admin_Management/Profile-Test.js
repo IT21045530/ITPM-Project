@@ -103,6 +103,19 @@ const Profile = () => {
                     >
                         <Input placeholder="Email" />
                     </Form.Item>
+
+                    {/* <Form.Item
+                        name="role"
+                        rules={[{ required: true, message: 'Please select your role!' }]}
+                    >
+                        <Select placeholder="Select your role">
+                            <Option value="admin">Admin</Option>
+                            <Option value="user">User</Option>
+                            <Option value="seller">Seller</Option>
+                            <Option value="investor">Investor</Option>
+                        </Select>
+                    </Form.Item> */}
+
                     <Form.Item>
                         <Button type="primary" htmlType="submit">
                             Update

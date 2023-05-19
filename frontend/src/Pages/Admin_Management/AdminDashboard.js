@@ -114,7 +114,7 @@ const AdminDashboard = () => {
                             setActiveIndex(7)
                         }}
                         key="addblog" icon={<AreaChartOutlined />}>
-                        Add Blog
+                        Add New Blog
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
