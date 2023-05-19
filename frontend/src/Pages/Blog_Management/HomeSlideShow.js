@@ -8,7 +8,7 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import ProductCatogory from "../../Components/ProductCatogory";
 import { useNavigate } from "react-router-dom";
-import BlogSlider from "../../Components/BlogSlider";
+import HomeSlider from "../../Components/HomeSlider";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,7 +51,7 @@ function Blog() {
     <>
       <Container style={{ height: "100%" }}>
         <br />
-        <BlogSlider />
+        <HomeSlider />
         {/* <marquee>
           <p
             style={{
@@ -65,7 +65,6 @@ function Blog() {
           </p>
         </marquee> */}
         <dev></dev>
-
         {/* <div classname={classes.root} style={{ padding: "15px" }}>
           <Grid container spacing={3}>
             {blogs.map((e, i) => (
@@ -129,8 +128,7 @@ function Blog() {
           </Grid>
         </div> */}
       </Container>
-      <br></br> 
-      
+      <br></br>
     </>
   );
 }

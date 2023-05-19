@@ -25,8 +25,6 @@ import RegisterUser from "./Pages/Admin_Management/RegisterUser";
 import ThankYou from "./Pages/Product_Management/ThankYou";
 import WelcomeSeller from "./Pages/Product_Management/WelcomeSeller";
 
-
-
 import AddMachineForm from "./Pages/Product_Management/AddMachineForm";
 import AddFertilizerForm from "./Pages/Product_Management/AddFertilizerForm";
 import ViewPlant from "./Pages/Product_Management/ViewPlant";
@@ -42,7 +40,7 @@ import BloggerPage from "./Pages/Blog_Management/BloggerPage";
 import BlogView from "./Pages/Blog_Management/BlogView";
 import ViewBlogDetails from "./Pages/Blog_Management/ViewBlogDetails";
 import UpdateBlog from "./Pages/Blog_Management/UpdateBlog";
-import 'antd/dist/reset.css';
+import "antd/dist/reset.css";
 import AdminDashboard from "./Pages/Admin_Management/AdminDashboard";
 import SellerDashboard from "./Pages/Admin_Management/SellerDashboard";
 import InvestorDashboard from "./Pages/Admin_Management/InvestorDashboard";
@@ -58,11 +56,10 @@ import LandManaging from "./Pages/Resource_Management/land_managing";
 
 function App() {
   return (
-    
     <>
       <NavBar />
       <Routes>
-        <Route exact path='/' element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/Blogs" element={<Blog />} />
         <Route exact path="/Seller" element={<Seller />} />
         <Route exact path="/Plants" element={<Plants />} />
@@ -85,7 +82,11 @@ function App() {
         <Route exact path="/ThankYou" element={<ThankYou />} />
         <Route exact path="/WelcomeSeller" element={<WelcomeSeller />} />
         <Route exact path="/AddMachineForm" element={<AddMachineForm />} />
-        <Route exact path="/AddFertilizerForm" element={<AddFertilizerForm />} />
+        <Route
+          exact
+          path="/AddFertilizerForm"
+          element={<AddFertilizerForm />}
+        />
         <Route exact path="/ViewPlant" element={<ViewPlant />} />
         <Route exact path="/ViewMachines" element={<ViewMachines />} />
         <Route exact path="/ViewFertilizer" element={<ViewFertilizer />} />
@@ -93,21 +94,29 @@ function App() {
         <Route exact path="/FertilizerTable" element={<FertilizerTable />} />
         <Route exact path="/plantUpdateDetails" element={<PlantUpdate />} />
         <Route exact path="/machineUpdateDetails" element={<MachineUpdate />} />
-        <Route exact path="/fertilizerUpdateDetails" element={<FertilizerUpdate />} />
+        <Route
+          exact
+          path="/fertilizerUpdateDetails"
+          element={<FertilizerUpdate />}
+        />
         <Route exact path="/BloggerManagement" element={<BloggerPage />} />
         <Route exact path="/BlogView" element={<BlogView />} />
         <Route exact path="/ViewBlogDetails" element={<ViewBlogDetails />} />
         <Route exact path="/UpdateBlogDetails" element={<UpdateBlog />} />
         <Route exact path="/Profile" element={<Profile />} />
-        {localStorage.getItem("userRole") === "admin" && <Route exact path="/AdminDashboard" element={<AdminDashboard />} />}
-        {localStorage.getItem("userRole") === "seller" && <Route exact path="/SellerDashboard" element={<SellerDashboard />} />}
-        {localStorage.getItem("userRole") === "investor" && <Route exact path="/InvestorDashboard" element={<InvestorDashboard />} />}
-     
-        <Route exact path="/Resource_Managemnt/RM_AddLands" element={<RM_AddLands />} />
-        <Route exact path="/Resource_Managemnt/RM_update_lands" element={<RM_update_lands />} />
-        <Route exact path="/Resource_Managemnt/InvesterManaging" element={<InvesterManaging />} />
-        <Route exact path="/Resource_Managemnt/LandManaging" element={<LandManaging />} />
-
+        {localStorage.getItem("userRole") === "admin" && (
+          <Route exact path="/AdminDashboard" element={<AdminDashboard />} />
+        )}
+        {localStorage.getItem("userRole") === "seller" && (
+          <Route exact path="/SellerDashboard" element={<SellerDashboard />} />
+        )}
+        {localStorage.getItem("userRole") === "investor" && (
+          <Route
+            exact
+            path="/InvestorDashboard"
+            element={<InvestorDashboard />}
+          />
+        )}
       </Routes>
       <Footer />
       {/* <div className="App">
