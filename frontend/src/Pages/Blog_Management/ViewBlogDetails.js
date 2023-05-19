@@ -60,12 +60,12 @@ function ViewBlogDetails() {
                         <div className={classes.root}>
                             <Grid container spacing={3}>
                                 <Grid item xs={12}>
-                                    <Button variant="outline-success" href='/BloggerManagement'>
+                                    {/* <Button variant="outline-success" href='/BloggerManagement'>
                                         Add Blogs
                                     </Button>
                                     <Button variant="outline-success" href='/ViewBlogDetails'>
                                         View all the blogs
-                                    </Button>
+                                    </Button> */}
                                 </Grid>
                             </Grid>
                         </div >

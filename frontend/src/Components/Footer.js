@@ -20,7 +20,7 @@ function Footer() {
             <Grid container style={{ height: '300px', backgroundColor: 'rgb(60, 179, 113)', display: 'flex', justifyContent: 'center' }}
             >
                 <Grid item xs={12} md={6} style={{ height: '100%', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', paddingTop: '5px' }}>
-                    <p style={{ color: 'white' }}>Samrt Harvest(PVT) Ltd</p>
+                    <p style={{ color: 'white' }}>Smart Harvest (PVT) Ltd</p>
                     <Container style={{ display: 'flex', justifyContent: 'center' }}>
                         <p><InstagramIcon style={{ color: 'white', marginRight: '15px', cursor: 'pointer' }} /></p>
                         <p><FacebookIcon style={{ color: 'white', marginRight: '15px', cursor: 'pointer' }} /></p>

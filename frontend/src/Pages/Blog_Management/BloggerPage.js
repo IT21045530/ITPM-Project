@@ -64,19 +64,19 @@ function BloggerPage() {
                     <div className={classes.root}>
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
-                                <Button variant="outline-success" href='/BloggerManagement'>
+                                {/* <Button variant="outline-success" href='/BloggerManagement'>
                                     Add Blogs
                                 </Button>
                                 <Button variant="outline-success" href='/ViewBlogDetails'>
                                     View all the blogs
-                                </Button>
+                                </Button> */}
                             </Grid>
                         </Grid>
                     </div >
                 </center >
             </Container >
             <Container style={{ backgroundColor: 'LightGray', marginTop: '60px', width: '80%', padding: '40px', borderRadius: '5px' }}>
-                <h1>This is the add blog section</h1>
+                <h1>Add a new blog </h1>
                 <br />
                 <Form onSubmit={Validate} >
                     <Row className="mb-3">
@@ -118,9 +118,10 @@ function BloggerPage() {
                             Submit
                         </Button>
                     </center>
+                    
                 </Form>
 
-            </Container>
+            </Container><br></br> <br></br><br></br> <br></br><br></br> <br></br>
         </>
     );
 }

@@ -31,6 +31,10 @@ function Login() {
       localStorage.setItem("email", val.data.user.email)
       if (val.data.user.role === "admin") {
         navigate("/AdminDashboard")
+      } else if (val.data.user.role === "seller") {
+        navigate("/SellerDashboard")
+      } else if (val.data.user.role === "investor") {
+        navigate("/InvestorDashboard")
       } else {
         navigate("/")
       }
