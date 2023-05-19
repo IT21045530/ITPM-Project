@@ -48,6 +48,12 @@ import ContactUs from "./Pages/Admin_Management/ContactUs";
 import Profile from "./Pages/Admin_Management/Profile";
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 // import ContactForm from './components/ContactForm'
+
+import RM_AddLands from "./Pages/Resource_Management/add_lands";
+import RM_update_lands from "./Pages/Resource_Management/update_lands";
+import InvesterManaging from "./Pages/Resource_Management/invester_managing";
+import LandManaging from "./Pages/Resource_Management/land_managing";
+
 function App() {
   return (
     <>
