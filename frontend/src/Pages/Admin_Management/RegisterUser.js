@@ -82,7 +82,7 @@ const RegisterUser = () => {
             <Select>
               <Option value="user">User</Option>
               <Option value="seller">Seller</Option>
-              <Option value="investor">Investor</Option>
+              {/* <Option value="investor">Investor</Option> */}
             </Select>
           </Form.Item>
           <Form.Item label="Password" name="password" rules={[{ required: true, message: 'Please enter a password' }]}>

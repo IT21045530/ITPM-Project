@@ -50,6 +50,12 @@ import ContactUs from "./Pages/Admin_Management/ContactUs";
 import Profile from "./Pages/Admin_Management/Profile";
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 // import ContactForm from './components/ContactForm'
+
+import RM_AddLands from "./Pages/Resource_Management/add_lands";
+import RM_update_lands from "./Pages/Resource_Management/update_lands";
+import InvesterManaging from "./Pages/Resource_Management/invester_managing";
+import LandManaging from "./Pages/Resource_Management/land_managing";
+
 function App() {
   return (
     
@@ -96,6 +102,12 @@ function App() {
         {localStorage.getItem("userRole") === "admin" && <Route exact path="/AdminDashboard" element={<AdminDashboard />} />}
         {localStorage.getItem("userRole") === "seller" && <Route exact path="/SellerDashboard" element={<SellerDashboard />} />}
         {localStorage.getItem("userRole") === "investor" && <Route exact path="/InvestorDashboard" element={<InvestorDashboard />} />}
+     
+        <Route exact path="/Resource_Managemnt/RM_AddLands" element={<RM_AddLands />} />
+        <Route exact path="/Resource_Managemnt/RM_update_lands" element={<RM_update_lands />} />
+        <Route exact path="/Resource_Managemnt/InvesterManaging" element={<InvesterManaging />} />
+        <Route exact path="/Resource_Managemnt/LandManaging" element={<LandManaging />} />
+
       </Routes>
       <Footer />
       {/* <div className="App">
