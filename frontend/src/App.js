@@ -42,10 +42,17 @@ import BloggerPage from "./Pages/Blog_Management/BloggerPage";
 import BlogView from "./Pages/Blog_Management/BlogView";
 import ViewBlogDetails from "./Pages/Blog_Management/ViewBlogDetails";
 import UpdateBlog from "./Pages/Blog_Management/UpdateBlog";
-import LoginNew from "./Pages/Admin_Management/LoginNew";
-
+import 'antd/dist/reset.css';
+import AdminDashboard from "./Pages/Admin_Management/AdminDashboard";
+import SellerDashboard from "./Pages/Admin_Management/SellerDashboard";
+import InvestorDashboard from "./Pages/Admin_Management/InvestorDashboard";
+import ContactUs from "./Pages/Admin_Management/ContactUs";
+import Profile from "./Pages/Admin_Management/Profile";
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+// import ContactForm from './components/ContactForm'
 function App() {
   return (
+
     <>
       <NavBar />
       <Routes>
@@ -63,8 +70,8 @@ function App() {
         <Route exact path="/FlowersPList" element={<FlowersPList />} />
         <Route exact path="/ProductTable" element={<ProductTable />} />
 
-
         <Route exact path="/Test" element={<Test />} />
+        <Route exact path="/ContactUs" element={<ContactUs />} />
         <Route exact path="/Login" element={<Login />} />
         <Route exact path="/Register" element={<RegisterUser />} />
         <Route exact path="/PaymentForm" element={<PaymentForm />} />
@@ -85,11 +92,15 @@ function App() {
         <Route exact path="/BlogView" element={<BlogView />} />
         <Route exact path="/ViewBlogDetails" element={<ViewBlogDetails />} />
         <Route exact path="/UpdateBlogDetails" element={<UpdateBlog />} />
-        <Route exact path="/LoginPage" element={<LoginNew />} />
-
+        <Route exact path="/Profile" element={<Profile />} />
+        {localStorage.getItem("userRole") === "admin" && <Route exact path="/AdminDashboard" element={<AdminDashboard />} />}
+        {localStorage.getItem("userRole") === "seller" && <Route exact path="/SellerDashboard" element={<SellerDashboard />} />}
+        {localStorage.getItem("userRole") === "investor" && <Route exact path="/InvestorDashboard" element={<InvestorDashboard />} />}
       </Routes>
       <Footer />
-
+      {/* <div className="App">
+      <ContactForm />
+      </div> */}
     </>
   );
 }

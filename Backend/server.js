@@ -44,8 +44,8 @@ app.use("/api/fertilizers", fertilizerRoute)
 const BlogRouter = require("./Routes/BlogRoute");
 app.use("/api/Blogs", BlogRouter);
 
-//register user route
-// const RegisterUserRoute = require("./Routes/RegisterUserRoutes");
-// app.use("/api/users", RegisterUseRoute);
+//user managing routes
+const UserManagementRoutes = require("./Controllers/UserController");
+app.use("/api/users", UserManagementRoutes);
 
 

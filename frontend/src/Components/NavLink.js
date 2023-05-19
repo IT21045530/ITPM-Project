@@ -5,8 +5,10 @@ import Nav from 'react-bootstrap/Nav';
 import '../Styles/btnStyles.css'
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../Images/logo.png'
-
+import { useNavigate } from 'react-router-dom';
 function NavLink() {
+
+  const navigate = useNavigate()
   return (
     <Navbar style={{ backgroundColor: 'rgb(60, 179, 113)' }} expand="lg">
       <Container fluid style={{ marginLeft: '3%', marginRight: '3%' }}>
@@ -28,14 +30,24 @@ function NavLink() {
           >
             <Nav.Link className='btnLink' href="/" >Home</Nav.Link>
             <Nav.Link className='btnLink' href="/OurServices" >Our services</Nav.Link>
-            <Nav.Link className='btnLink' href="/Blogs" >Blog</Nav.Link>
-            <Nav.Link className='btnLink' href="/Test" >ContactUs</Nav.Link>
+            <Nav.Link className='btnLink' href="/Blogs" >Blogs</Nav.Link>
+            {/* <Nav.Link className='btnLink' href="/Test" >Test</Nav.Link> */}
+            <Nav.Link className='btnLink' href="/ContactUs" >ContactUs</Nav.Link>
+            <Nav.Link className='btnLink' href="/Profile" >Profile</Nav.Link>
             <Nav.Link className='btnLink' href="/WelcomeSeller" >Seller</Nav.Link>
             <Nav.Link className='btnLink' href="/BloggerManagement" >Blogger</Nav.Link>
           </Nav>
           <Form className="d-flex">
-            {/* <Button href="/Login" variant="outline-success">Login</Button> */}
-            <Button href="/LoginPage" variant="outline-success">Login</Button>
+            {
+              localStorage.getItem("token") ?
+                <Button variant="outline-success"
+                  onClick={(e) => {
+                    localStorage.clear()
+                    navigate("/Register")
+                  }}
+                >Logout</Button>
+                : <Button href="/Login" variant="outline-success">Login</Button>
+            }
           </Form>
         </Navbar.Collapse>
       </Container>
