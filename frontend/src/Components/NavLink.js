@@ -30,8 +30,10 @@ function NavLink() {
           >
             <Nav.Link className='btnLink' href="/" >Home</Nav.Link>
             <Nav.Link className='btnLink' href="/OurServices" >Our services</Nav.Link>
-            <Nav.Link className='btnLink' href="/Blogs" >Blog</Nav.Link>
-            <Nav.Link className='btnLink' href="/Test" >ContactUs</Nav.Link>
+            <Nav.Link className='btnLink' href="/Blogs" >Blogs</Nav.Link>
+            {/* <Nav.Link className='btnLink' href="/Test" >Test</Nav.Link> */}
+            <Nav.Link className='btnLink' href="/ContactUs" >ContactUs</Nav.Link>
+            <Nav.Link className='btnLink' href="/Profile" >Profile</Nav.Link>
             <Nav.Link className='btnLink' href="/WelcomeSeller" >Seller</Nav.Link>
             <Nav.Link className='btnLink' href="/BloggerManagement" >Blogger</Nav.Link>
           </Nav>

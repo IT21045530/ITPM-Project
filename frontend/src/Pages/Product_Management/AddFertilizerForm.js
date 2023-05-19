@@ -71,7 +71,7 @@ function AddFertilizerForm() {
                     <div className={classes.root}>
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
-                                <Button variant="outline-success" href='/AddProductForm'>
+                                {/* <Button variant="outline-success" href='/AddProductForm'>
                                     Plants
                                 </Button>
                                 <Button variant="outline-success" href='/AddMachineForm'>
@@ -79,14 +79,14 @@ function AddFertilizerForm() {
                                 </Button>
                                 <Button variant="outline-success" href='/AddFertilizerForm'>
                                     Fertilizers
-                                </Button>
+                                </Button> */}
                             </Grid>
                         </Grid>
                     </div >
                 </center >
             </Container >
             <Container style={{ backgroundColor: 'LightGray', marginTop: '60px', width: '80%', padding: '40px', borderRadius: '5px' }}>
-                <h1>This is the add Fertilizer section</h1>
+                <h1>This is the add fertilizer section</h1>
 
                 <Form onSubmit={Validate}>
                     <Row className="mb-3">
@@ -135,7 +135,7 @@ function AddFertilizerForm() {
                     </center>
                 </Form>
 
-            </Container>
+            </Container><br></br> <br></br><br></br> <br></br><br></br> <br></br>
         </>
     );
 }
