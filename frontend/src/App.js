@@ -47,6 +47,7 @@ import AdminDashboard from "./Pages/Admin_Management/AdminDashboard";
 import SellerDashboard from "./Pages/Admin_Management/SellerDashboard";
 import InvestorDashboard from "./Pages/Admin_Management/InvestorDashboard";
 import ContactUs from "./Pages/Admin_Management/ContactUs";
+import Profile from "./Pages/Admin_Management/Profile";
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 // import ContactForm from './components/ContactForm'
 function App() {
@@ -91,6 +92,7 @@ function App() {
         <Route exact path="/BlogView" element={<BlogView />} />
         <Route exact path="/ViewBlogDetails" element={<ViewBlogDetails />} />
         <Route exact path="/UpdateBlogDetails" element={<UpdateBlog />} />
+        <Route exact path="/Profile" element={<Profile />} />
         {localStorage.getItem("userRole") === "admin" && <Route exact path="/AdminDashboard" element={<AdminDashboard />} />}
         {localStorage.getItem("userRole") === "seller" && <Route exact path="/SellerDashboard" element={<SellerDashboard />} />}
         {localStorage.getItem("userRole") === "investor" && <Route exact path="/InvestorDashboard" element={<InvestorDashboard />} />}
