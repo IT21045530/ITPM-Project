@@ -10,6 +10,7 @@ import Button from 'react-bootstrap/esm/Button';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ReportGenerator from '../../Components/ReportGenerator';
 import jsPDF from 'jspdf';
+import { Page, Text, Image, Document, StyleSheet, PDFDownloadLink } from "@react-pdf/renderer";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -43,8 +44,6 @@ function BlogView() {
     const ID = location.state.props;
     const [blog, setBlog] = useState([]);
 
-    const columnsPDF = [{ Title: 'Title', Blogger_Name: 'Blogger_Name', Blogger_Position: 'Blogger_Position', Content: 'Content' }]
-
     useEffect(() => {
         axios.get(`http://localhost:4000/api/Blogs/getBlogDetails/${ID}`).then((res) => {
             setBlog(res.data.BlogDetails[0]);
@@ -53,15 +52,8 @@ function BlogView() {
         })
     }, [])
 
-    console.log("Blof:: ", blog)
+    console.log("BlogS:: ", blog)
     const classes = useStyles();
-
-    function downloadPDF() {
-        const doc = new jsPDF();
-        const pageContent = document.documentElement.outerHTML;
-        doc.text(pageContent, 10, 10);
-        doc.save("page.pdf");
-    }
 
     return (
         <>
@@ -89,7 +81,6 @@ function BlogView() {
                             </Card>
                         </Grid>
                         <Grid item xs={6} sm={6} md={4} >
-
                             <CardContent>
                                 <CardHeader
                                     title={blog.title}
@@ -101,9 +92,6 @@ function BlogView() {
                             <p style={{ fontSize: '17px', fontFamily: 'Georgia' }}>{blog.content}</p>
                         </Grid>
                         <Divider orientation="vertical" flexItem sx={{ borderRightWidth: 5 }} />
-                        <Button onClick={downloadPDF}>
-                            Download
-                        </Button>
                     </Grid>
                 </Card>
             </Container >

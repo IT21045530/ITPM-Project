@@ -13,28 +13,13 @@ import Cod from '../../Images/cod.jpg';
 function PaymentForm() {
     return (
         <>
-            <Container style={{ backgroundColor: 'LightGray', marginTop: '60px', width: '80%', padding: '40px', borderRadius: '5px' }}>
-
+            <Container style={{ backgroundColor: 'LightGray', marginTop: '60px', width: '50%', padding: '40px', borderRadius: '5px' }}>
                 <Form>
-                    <Row className="mb-3">
-                        <Form.Group as={Col} controlId="formGridProductID">
-                            <Form.Label>Product ID</Form.Label>
-                            <Form.Control type="ProductID" placeholder="Enter ProductID" />
-                        </Form.Group>
-
-                        <Form.Group as={Col} controlId="formGridProductName">
-                            <Form.Label>Product Name</Form.Label>
-                            <Form.Control type="ProductName" placeholder="ProductName" />
-                        </Form.Group>
-                    </Row>
                     <Row className="mb-3">
                         <Form.Group className="mb-3" controlId="formGridUnitPrice">
                             <Form.Label>Unit Price</Form.Label>
                             <Form.Control placeholder="" />
                         </Form.Group>
-                    </Row>
-
-                    <Row className="mb-3">
 
                         <div class="form-group" as={Col} >
                             <label for="inputState">Quntity</label>
@@ -67,35 +52,37 @@ function PaymentForm() {
                             <Form.Control />
                         </Form.Group>
                     </Row>
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Payment Methode</label><br></br>
+                    <div style={{ display: 'flex' }}>
+                        <Row className="mb-3" style={{ marginRight: '14px' }}>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked />
+                                <label class="form-check-label" for="exampleRadios1">
+                                    <img src={Master} style={{ height: '50px' }} />
+                                </label>
+                            </div>
+                        </Row>
+                        <br></br>
+                        <Row className="mb-3" style={{ marginRight: '14px' }}>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
+                                <label class="form-check-label" for="exampleRadios2">
+                                    <img src={Visa} style={{ height: '40px' }} />
+                                </label>
+                            </div>
+                        </Row>
+                        <br></br>
+                        <Row className="mb-3" style={{ marginRight: '14px' }}>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
+                                <label class="form-check-label" for="exampleRadios2">
+                                    <img src={Cod} style={{ height: '50px' }} />
+                                </label>
 
-                    <Row className="mb-3">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Payment Methode</label><br></br>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked />
-                            <label class="form-check-label" for="exampleRadios1">
-                                <img src={Master} style={{ height: '50px' }} />
-                            </label>
-                        </div>
-                    </Row>
-                    <br></br>
-                    <Row className="mb-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
-                            <label class="form-check-label" for="exampleRadios2">
-                                <img src={Visa} style={{ height: '40px' }} />
-                            </label>
-                        </div>
-                    </Row>
-                    <br></br>
-                    <Row className="mb-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
-                            <label class="form-check-label" for="exampleRadios2">
-                                <img src={Cod} style={{ height: '50px' }} />
-                            </label>
+                            </div>
+                        </Row>
+                    </div>
 
-                        </div>
-                    </Row>
                     <br></br>
 
                     <Form.Group className="mb-3" id="formGridCheckbox">
@@ -103,7 +90,7 @@ function PaymentForm() {
                     </Form.Group>
 
                     <Button variant="primary" type="submit" href="/PayNow">
-                        Proceed To Payment
+                        Pay Now
                     </Button>
                 </Form>
 

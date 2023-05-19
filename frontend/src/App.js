@@ -56,6 +56,7 @@ import LandManaging from "./Pages/Resource_Management/land_managing";
 
 function App() {
   return (
+
     <>
       <NavBar />
       <Routes>
@@ -104,19 +105,10 @@ function App() {
         <Route exact path="/ViewBlogDetails" element={<ViewBlogDetails />} />
         <Route exact path="/UpdateBlogDetails" element={<UpdateBlog />} />
         <Route exact path="/Profile" element={<Profile />} />
-        {localStorage.getItem("userRole") === "admin" && (
-          <Route exact path="/AdminDashboard" element={<AdminDashboard />} />
-        )}
-        {localStorage.getItem("userRole") === "seller" && (
-          <Route exact path="/SellerDashboard" element={<SellerDashboard />} />
-        )}
-        {localStorage.getItem("userRole") === "investor" && (
-          <Route
-            exact
-            path="/InvestorDashboard"
-            element={<InvestorDashboard />}
-          />
-        )}
+        {localStorage.getItem("userRole") === "admin" && <Route exact path="/AdminDashboard" element={<AdminDashboard />} />}
+        {localStorage.getItem("userRole") === "seller" && <Route exact path="/SellerDashboard" element={<SellerDashboard />} />}
+        {localStorage.getItem("userRole") === "investor" && <Route exact path="/InvestorDashboard" element={<InvestorDashboard />} />}
+        <Route exact path="/payment" element={<PaymentForm />} />
       </Routes>
       <Footer />
       {/* <div className="App">

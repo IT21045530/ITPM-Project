@@ -29,11 +29,15 @@ function NavLink() {
             navbarScroll
           >
             <Nav.Link className='btnLink' href="/" >Home</Nav.Link>
-            <Nav.Link className='btnLink' href="/OurServices" >Our services</Nav.Link>
+            <Nav.Link className='btnLink' href="/OurServices" >Our Services</Nav.Link>
             <Nav.Link className='btnLink' href="/Blogs" >Blogs</Nav.Link>
             {/* <Nav.Link className='btnLink' href="/Test" >Test</Nav.Link> */}
-            <Nav.Link className='btnLink' href="/ContactUs" >ContactUs</Nav.Link>
+            <Nav.Link className='btnLink' href="/ContactUs" >Contact Us</Nav.Link>
             <Nav.Link className='btnLink' href="/Profile" >Profile</Nav.Link>
+            {/* <Nav.Link className='btnLink' href="/SellerDashboard" >Seller Dashboard</Nav.Link> */}
+            {localStorage.getItem("userRole") === "seller" && <Nav.Link className='btnLink' href="/SellerDashboard" >Seller Dashboard</Nav.Link>}
+            {localStorage.getItem("userRole") === "admin" && <Nav.Link className='btnLink' href="/AdminDashboard" >Admin Dashboard</Nav.Link>}
+            {localStorage.getItem("userRole") === "investor" && <Nav.Link className='btnLink' href="/InvestorDashboard" >Investor Dashboard</Nav.Link>}
             {/* <Nav.Link className='btnLink' href="/WelcomeSeller" >Seller</Nav.Link>
             <Nav.Link className='btnLink' href="/BloggerManagement" >Blogger</Nav.Link> */}
           </Nav>

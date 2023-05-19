@@ -1,6 +1,6 @@
 const express = require("express")
 
-const { fertilizerInsert, getFertilizers, getFertilizerDetails, updateFertilizer } = require("../Controllers/FertilizerController");
+const { fertilizerInsert, getFertilizers, getFertilizerDetails, updateFertilizer, deleteFertilizer } = require("../Controllers/FertilizerController");
 
 const router = express.Router();
 
@@ -12,6 +12,9 @@ router.get("/getAllFertilizers", getFertilizers);
 
 //get selected fertilizer details
 router.get("/getFertilizer/:id", getFertilizerDetails);
+
+//delete a specific fertilizer item
+router.delete("/deleteFertlizer/:id", deleteFertilizer)
 
 //update a specific fertilizer details
 router.put("/updateFertilizer", updateFertilizer)

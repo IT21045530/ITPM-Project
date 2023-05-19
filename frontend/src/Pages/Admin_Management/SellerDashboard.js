@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import { Layout, Menu } from 'antd';
 import {
-    UserOutlined,
     DashboardOutlined,
     ShoppingOutlined,
-    StockOutlined,
-    AreaChartOutlined,
-    FormOutlined,
-    PieChartOutlined,
 } from '@ant-design/icons';
 import UsersData from './UsersData';
 import ViewBlogDetails from '../Blog_Management/ViewBlogDetails';
@@ -18,6 +13,10 @@ import AddProductForm from '../Product_Management/AddProductForm';
 import AddMachineForm from '../Product_Management/AddMachineForm';
 import AddFertilizerForm from '../Product_Management/AddFertilizerForm';
 import WelcomeSellerDashboard from './WelcomeSellerDashboard';
+import EcoIcon from '@material-ui/icons/Eco';
+import SettingsIcon from '@material-ui/icons/Settings';
+import WorkIcon from '@material-ui/icons/Work';
+import AddBoxIcon from '@material-ui/icons/AddBox';
 
 
 const { Sider, Content } = Layout;
@@ -26,7 +25,6 @@ const AdminDashboard = () => {
     const [activeIndex, setActiveIndex] = useState(0)
     const content = [
         <WelcomeSellerDashboard />,
-        // <UsersData />,
         <ProductTable />,
         <MachineTable />,
         <FertilizerTable />,
@@ -34,15 +32,12 @@ const AdminDashboard = () => {
         <AddMachineForm />,
         <AddFertilizerForm />,
         <ViewBlogDetails />,
-        <div></div>,
-        <div></div>,
-        <div></div>,
     ]
 
 
     return (
-        <Layout style={{ minHeight: '100vh' }}>
-            <Sider width={200} theme="light" collapsible>
+        <Layout style={{ height: 'auto' }}>
+            <Sider width={180} theme="light" collapsible>
                 <Menu mode="inline" theme="light" defaultSelectedKeys={['Dashboard']}>
                     <Menu.Item key="Dashboard"
 
@@ -52,91 +47,48 @@ const AdminDashboard = () => {
                         icon={<DashboardOutlined />}>
                         Dashboard
                     </Menu.Item>
-                    {/* <Menu.Item
-                        onClick={() => {
-                            setActiveIndex(1)
-                        }}
-                        key="users" icon={<UserOutlined />}>
-                        Users
-                    </Menu.Item> */}
-                    {/* <Menu.Item
-                        onClick={() => {
-                            setActiveIndex(2)
-                        }}
-
-                        key="products" icon={<ShoppingOutlined />}>
-                        Products
-                    </Menu.Item>
-                    <Menu.Item
-                        onClick={() => {
-                            setActiveIndex(3)
-                        }}
-                        key="inventory" icon={<StockOutlined />}>
-                        Inventory
-                    </Menu.Item> */}
                     <Menu.Item
                         onClick={() => {
                             setActiveIndex(1)
                         }}
-                        key="plants" icon={<ShoppingOutlined />}>
+                        key="plants" icon={<EcoIcon />}>
                         Plants
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
                             setActiveIndex(2)
                         }}
-                        key="machines" icon={<ShoppingOutlined />}>
+                        key="machines" icon={<SettingsIcon />}>
                         Machines
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
                             setActiveIndex(3)
                         }}
-                        key="fertilizers" icon={<ShoppingOutlined />}>
+                        key="fertilizers" icon={<WorkIcon />}>
                         Fertilizers
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
                             setActiveIndex(4)
                         }}
-                        key="addnewproduct" icon={<ShoppingOutlined />}>
-                        Add New Plant
+                        key="addnewproduct" icon={<AddBoxIcon />}>
+                        Add Plant
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
                             setActiveIndex(5)
                         }}
-                        key="addnewmachine" icon={<ShoppingOutlined />}>
-                        Add New Machine
+                        key="addnewmachine" icon={<AddBoxIcon />}>
+                        Add Machine
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
                             setActiveIndex(6)
                         }}
-                        key="addnewfertilizer" icon={<ShoppingOutlined />}>
-                        Add New Fertilizer
+                        key="addnewfertilizer" icon={<AddBoxIcon />}>
+                        Add Fertilizer
                     </Menu.Item>
-                    {/* <Menu.Item
-                        onClick={() => {
-                            setActiveIndex(6)
-                        }}
-                        key="blogs" icon={<FormOutlined />}>
-                        Blogs
-                    </Menu.Item> */}
-                    {/* <Menu.Item
-                        onClick={() => {
-                            setActiveIndex(7)
-                        }}
-                        key="invests" icon={<AreaChartOutlined />}>
-                        Invests
-                    </Menu.Item> */}
-                    {/* <Menu.Item
-                        onClick={() => {
-                            setActiveIndex(4)
-                        }}
-                        key="analytics" icon={<PieChartOutlined />}>
-                        Analytics
-                    </Menu.Item> */}
                 </Menu>
             </Sider>
             <Layout>

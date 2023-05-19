@@ -39,6 +39,7 @@ function ViewPlant() {
     const location = useLocation();
     const ID = location.state.props;
     const [plant, setPlant] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get(`http://localhost:4000/api/products/getPlant/${ID}`).then((res) => {
@@ -48,7 +49,11 @@ function ViewPlant() {
         })
     }, []);
 
-    // const navigate = useNavigate()
+    const Payment = (e) => {
+        navigate("/payment");
+    }
+
+
 
     const classes = useStyles();
 
@@ -80,15 +85,7 @@ function ViewPlant() {
                             <h4>{plant.description}</h4>
                             <br />
                             <h3>Rs.{plant.price}.00</h3>
-                            {/* <h3>{item.itemName}</h3> */}
-                            {/* <input type='number' placeholder='0' style={{ width: '15%', paddingLeft: '6px' }} /> */}
-                            <h5>Enter Amount : </h5>
-                            {/* <MDBInput id='typeNumber' type='number' value={quantity} onChange={(e) => { setQuantity(e.target.value) }} defaultValue={1} style={{ width: "100px", marginBottom: "10px" }} /> */}
-                            {/* <Button style={{ marginRight: "10px" }} variant="btn btn-info"
-                                onClick={() => AddToCart(item)}>🛒 Add To Cart</Button> */}
-                            <Button onClick={() => {
-                                // navigate(`/ViewSeller/${item.seller}`)
-                            }} >See Seller</Button>
+                            <Button onClick={(e) => Payment(e)} >Proceed To Payment</Button>
                         </Paper>
 
                     </Grid>
