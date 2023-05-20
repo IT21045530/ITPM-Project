@@ -51,6 +51,17 @@ const getFertilizers = async (req, res) => {
     }
 }
 
+//Delete fertilizers
+const deleteFertilizer = async (req, res) => {
+    const id = req.params.id;
+    await fertilizerModel.findByIdAndDelete(id).then(() => {
+        res.status(200).send({ state: "Success" });
+    }).catch((err) => {
+        res.status(400).send({ send: err });
+    })
+}
+
+
 //get selected fertilizer view
 const getFertilizerDetails = async (req, res) => {
     try {
@@ -94,5 +105,6 @@ module.exports = {
     fertilizerInsert,
     getFertilizers,
     getFertilizerDetails,
-    updateFertilizer
+    updateFertilizer,
+    deleteFertilizer
 }

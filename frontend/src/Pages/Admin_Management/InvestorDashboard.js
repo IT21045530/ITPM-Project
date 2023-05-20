@@ -16,6 +16,7 @@ import MachineTable from '../Product_Management/MachineTable';
 import FertilizerTable from '../Product_Management/FertilizerTable';
 import AddProductForm from '../Product_Management/AddProductForm';
 import WelcomeInvestorDashboard from './WelcomeInvestorDashboard';
+import AddBoxIcon from '@material-ui/icons/AddBox';
 
 
 const { Sider, Content } = Layout;
@@ -106,7 +107,7 @@ const AdminDashboard = () => {
                         key="blogs" icon={<FormOutlined />}>
                         Blogs
                     </Menu.Item> */}
-                    <Menu.Item
+                    {/* <Menu.Item
                         onClick={() => {
                             setActiveIndex(1)
                         }}
@@ -119,6 +120,34 @@ const AdminDashboard = () => {
                         }}
                         key="lands" icon={<AreaChartOutlined />}>
                         Lands
+                    </Menu.Item> */}
+                    <Menu.Item
+                        onClick={() => {
+                            setActiveIndex(1)
+                        }}
+                        key="invests" icon={<AreaChartOutlined />}>
+                        Investor Details
+                    </Menu.Item>
+                    <Menu.Item
+                        onClick={() => {
+                            setActiveIndex(2)
+                        }}
+                        key="addinvests" icon={<AddBoxIcon />}>
+                        Add Investor Details
+                    </Menu.Item>
+                    <Menu.Item
+                        onClick={() => {
+                            setActiveIndex(3)
+                        }}
+                        key="lands" icon={<AreaChartOutlined />}>
+                        Lands
+                    </Menu.Item>
+                    <Menu.Item
+                        onClick={() => {
+                            setActiveIndex(4)
+                        }}
+                        key="addlands" icon={<AddBoxIcon />}>
+                        Add Lands
                     </Menu.Item>
                     {/* <Menu.Item
                         onClick={() => {

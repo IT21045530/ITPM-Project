@@ -36,6 +36,9 @@ function NavLink() {
             <Nav.Link className='btnLink' href="/Profile" >Profile</Nav.Link>
             {/* <Nav.Link className='btnLink' href="/WelcomeSeller" >Seller</Nav.Link>
             <Nav.Link className='btnLink' href="/BloggerManagement" >Blogger</Nav.Link> */}
+            {localStorage.getItem("userRole") === "seller" && <Nav.Link className='btnLink' href="/SellerDashboard" >Seller Dashboard</Nav.Link>}
+            {localStorage.getItem("userRole") === "admin" && <Nav.Link className='btnLink' href="/AdminDashboard" >Admin Dashboard</Nav.Link>}
+            {localStorage.getItem("userRole") === "investor" && <Nav.Link className='btnLink' href="/InvestorDashboard" >Investor Dashboard</Nav.Link>}
           </Nav>
           <Form className="d-flex">
             {

@@ -117,6 +117,7 @@ function App() {
             element={<InvestorDashboard />}
           />
         )}
+        <Route exact path="/payment" element={<PaymentForm />} />
       </Routes>
       <Footer />
       {/* <div className="App">

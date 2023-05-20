@@ -19,6 +19,10 @@ import AddProductForm from '../Product_Management/AddProductForm';
 import WelcomeDashboard from './WelcomeDashboard';
 import AddMachineForm from '../Product_Management/AddMachineForm';
 import AddFertilizerForm from '../Product_Management/AddFertilizerForm';
+import EcoIcon from '@material-ui/icons/Eco';
+import SettingsIcon from '@material-ui/icons/Settings';
+import WorkIcon from '@material-ui/icons/Work';
+import AddBoxIcon from '@material-ui/icons/AddBox';
 
 const { Sider, Content } = Layout;
 
@@ -82,42 +86,42 @@ const AdminDashboard = () => {
                         onClick={() => {
                             setActiveIndex(2)
                         }}
-                        key="plants" icon={<ShoppingOutlined />}>
+                        key="plants" icon={<EcoIcon />}>
                         Plants
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
                             setActiveIndex(3)
                         }}
-                        key="machines" icon={<ShoppingOutlined />}>
+                        key="machines" icon={<SettingsIcon />}>
                         Machines
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
                             setActiveIndex(4)
                         }}
-                        key="fertilizers" icon={<ShoppingOutlined />}>
+                        key="fertilizers" icon={<WorkIcon />}>
                         Fertilizers
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
                             setActiveIndex(5)
                         }}
-                        key="addnewproduct" icon={<ShoppingOutlined />}>
+                        key="addnewproduct" icon={<AddBoxIcon />}>
                         Add New Plant
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
                             setActiveIndex(6)
                         }}
-                        key="addnewmachine" icon={<ShoppingOutlined />}>
+                        key="addnewmachine" icon={<AddBoxIcon />}>
                         Add New Machine
                     </Menu.Item>
                     <Menu.Item
                         onClick={() => {
                             setActiveIndex(7)
                         }}
-                        key="addnewfertilizer" icon={<ShoppingOutlined />}>
+                        key="addnewfertilizer" icon={<AddBoxIcon />}>
                         Add New Fertilizer
                     </Menu.Item>
                     <Menu.Item
@@ -131,7 +135,7 @@ const AdminDashboard = () => {
                         onClick={() => {
                             setActiveIndex(9)
                         }}
-                        key="addblog" icon={<AreaChartOutlined />}>
+                        key="addblog" icon={<AddBoxIcon />}>
                         Add New Blog
                     </Menu.Item>
                     <Menu.Item
@@ -139,7 +143,28 @@ const AdminDashboard = () => {
                             setActiveIndex(10)
                         }}
                         key="invests" icon={<AreaChartOutlined />}>
-                        Invests
+                        Investor Details
+                    </Menu.Item>
+                    <Menu.Item
+                        onClick={() => {
+                            setActiveIndex(11)
+                        }}
+                        key="addinvests" icon={<AddBoxIcon />}>
+                        Add Investor Details
+                    </Menu.Item>
+                    <Menu.Item
+                        onClick={() => {
+                            setActiveIndex(12)
+                        }}
+                        key="lands" icon={<AreaChartOutlined />}>
+                        Lands
+                    </Menu.Item>
+                    <Menu.Item
+                        onClick={() => {
+                            setActiveIndex(13)
+                        }}
+                        key="addlands" icon={<AddBoxIcon />}>
+                        Add Lands
                     </Menu.Item>
                     {/* <Menu.Item
                         onClick={() => {
