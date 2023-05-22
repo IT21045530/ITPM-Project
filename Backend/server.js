@@ -49,3 +49,13 @@ const UserManagementRoutes = require("./Controllers/UserController");
 app.use("/api/users", UserManagementRoutes);
 
 
+//land route
+const landRoute = require("./Routes/Resource_Managment/Route_land");
+app.use("/land", landRoute);
+
+
+//investers route
+const investersRoute = require("./Routes/Resource_Managment/Route_investers");
+app.use("/investers", investersRoute);
+
+

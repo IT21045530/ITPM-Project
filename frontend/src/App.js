@@ -118,6 +118,14 @@ function App() {
           />
         )}
         <Route exact path="/payment" element={<PaymentForm />} />
+
+        <Route exact path="/Resource_Managemnt/RM_AddLands" element={<RM_AddLands />} />
+        <Route exact path="/Resource_Managemnt/RM_update_lands" element={<RM_update_lands />} />
+        
+        <Route exact path="/Resource_Managemnt/InvesterManaging" element={<InvesterManaging />} />
+        <Route exact path="/Resource_Managemnt/LandManaging" element={<LandManaging />} />
+
+
       </Routes>
       <Footer />
       {/* <div className="App">

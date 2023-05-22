@@ -8,7 +8,14 @@ import {
     MDBBtn,
     MDBTable, 
     MDBTableHead, 
-    MDBTableBody 
+    MDBTableBody ,
+    MDBModal,
+    MDBModalDialog,
+    MDBModalContent,
+    MDBModalHeader,
+    MDBModalTitle,
+    MDBModalBody,
+    MDBModalFooter
   } from 'mdb-react-ui-kit';
 
 function InvesterManaging() {
@@ -29,7 +36,7 @@ function InvesterManaging() {
     }, []);
     
     function load_land(){
-        axios.get('http://localhost:4000/api/LandRoute/getAllLands')
+        axios.get('http://localhost:4000/land/getAllLands')
         .then(response => {
           setAllLands(response.data);
         })
@@ -56,8 +63,10 @@ function InvesterManaging() {
 
 
     const [basicModal, setBasicModal] = useState(false);
-
     const toggleShow = () => setBasicModal(!basicModal);
+
+    const [editModal, setEditModal] = useState(false);
+    const toggleEditShow = () => setEditModal(!editModal);
 
     function add_new_land(){
         window.location.href="../Resource_Managemnt/RM_AddLands"
@@ -83,7 +92,7 @@ function InvesterManaging() {
 
     function deleteLand(id){
         axios
-        .delete(`http://localhost:4000/api/LandRoute/landDelete/${id}`)
+        .delete(`http://localhost:4000/land/landDelete/${id}`)
         .then((response) => {
           // Check the response status and display the success message
           if (response.status === 200) {
@@ -100,8 +109,7 @@ function InvesterManaging() {
     }
     
     const handleUpdate = (investorId) => {
-        // Handle update action for the specific investor
-        console.log(`Update investor with ID: ${investorId}`);
+      setEditModal(!editModal);
     };
     
     const handleView = (investorId) => {
@@ -110,12 +118,12 @@ function InvesterManaging() {
     };
 
     function back(){
-        window.location.href="../Resource_Managemnt/RM_dashboard";
+        window.location.href="../InvestorDashboard";
     }
 
     async function generate_report() {
       try {
-        const response = await axios.get('http://localhost:4000/api/LandRoute/getAllLands');
+        const response = await axios.get('http://localhost:4000/land/getAllLands');
         const lands = response.data;
         const generatedDate = new Date().toLocaleDateString();
         const title = 'Land Report';
@@ -163,6 +171,25 @@ function InvesterManaging() {
             <button className='btn btn-primary' onClick={generate_report}>Generate Report</button>{' '}
             <button className='btn btn-dark' onClick={back}> Back</button>
         </div>
+
+        <MDBModal show={editModal} setShow={setEditModal} tabIndex='-1'>
+            <MDBModalDialog size="lg">
+            <MDBModalContent>
+                <MDBModalHeader className='bg-dark text-white'>
+                <MDBModalTitle>Edit Land</MDBModalTitle>
+                <MDBBtn className='btn-close' color='none' onClick={toggleEditShow}></MDBBtn>
+                </MDBModalHeader>
+                
+
+                <MDBModalFooter style={{backgroundColor:'#E5EBE3'}}>
+                <MDBBtn color='secondary' onClick={toggleEditShow}>
+                    Close
+                </MDBBtn>
+                <MDBBtn color="dark" >Update</MDBBtn>
+                </MDBModalFooter>
+            </MDBModalContent>
+            </MDBModalDialog>
+        </MDBModal>
 
         <MDBTable bordered className="mt-3">
         <MDBTableHead dark>

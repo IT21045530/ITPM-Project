@@ -13,7 +13,10 @@ import {
     MDBModalTitle,
     MDBModalBody,
     MDBModalFooter,
-    MDBTable, MDBTableHead, MDBTableBody 
+    MDBTable,
+    MDBTableHead, 
+    MDBTableBody,
+    MDBIcon
   } from 'mdb-react-ui-kit';
 
 
@@ -215,13 +218,9 @@ function InvesterManaging() {
        
     };
     
-    const handleView = (investorId) => {
-        // Handle view action for the specific investor
-        console.log(`View investor with ID: ${investorId}`);
-    };
 
     function back(){
-        window.location.href="../Resource_Managemnt/RM_dashboard";
+        window.location.href="../InvestorDashboard";
     }
 
     async function generate_report(){
@@ -264,9 +263,57 @@ function InvesterManaging() {
         }
     }
 
-    function update_investor(){
-        
+    function update_investor() {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: 'Do you want to update the investor?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+          })
+            .then((result) => {
+              if (result.isConfirmed) {
+      
+                    // Perform the update request here
+                    const investorId = editInvesterID; // Replace with the actual investor ID
+                    const updatedData = {
+                        capital: editcapital,
+                        name: editname,
+                        cultivation: editcultivation,
+                        address: editaddress,
+                        telephoneNumber: edittelephoneNumber,
+                        occupation: editoccupation,
+                    };
+                
+                    axios.put(`http://localhost:4000/investers/updateInvester/${investorId}`, updatedData)
+                    .then(response => {
+                        // Handle success response
+                        console.log('Investor updated successfully:', response.data);
+                        // Show success alert using SweetAlert2
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Investor updated successfully',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        setEditModal(!editModal);
+                    })
+                    .catch(error => {
+                        // Handle error response
+                        console.error('Failed to update investor:', error);
+                        // Show error alert using SweetAlert2
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Failed to update investor',
+                            text: error.message,
+                        });
+                    });
+                }
+            });
     }
+      
+
   return (
     <div className='container' style={{paddingTop:'6%'}}>
         <div className='p-3 rounded mb-4' style={{backgroundColor:'#E5EBE3'}}>
@@ -401,7 +448,7 @@ function InvesterManaging() {
             </MDBModalDialog>
         </MDBModal>
 
-        <MDBTable bordered className="mt-3">
+        <MDBTable bordered  responsive className="mt-3" style={{width:'100%'}}>
         <MDBTableHead dark>
             <tr className="bg-dark text-white text-center">
             <th>#</th>
@@ -435,9 +482,7 @@ function InvesterManaging() {
                     <MDBBtn color="success" size="sm" onClick={() => handleUpdate(investor)}>
                         Update
                     </MDBBtn>{' '}
-                    <MDBBtn color="info" size="sm" onClick={() => handleView(investor._id)}>
-                        View
-                    </MDBBtn>
+                   
                 </td>
             </tr>
             ))}
